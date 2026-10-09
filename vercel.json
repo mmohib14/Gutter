@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/apexgutters_landing_page.html"
+    }
+  ]
+}
