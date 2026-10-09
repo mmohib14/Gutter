@@ -34,7 +34,7 @@ For privacy, keep the server on localhost and do not expose it publicly without 
 The repository includes Vercel serverless handlers for the API and serves the site files as static pages. The home page is available at `/`; its form submissions are stored in Postgres rather than the local JSON file.
 
 1. Create a Postgres database with Neon, then copy its connection string.
-2. Import this GitHub repository into Vercel. Keep the project root as the repository root; no build command or output directory is required.
+2. Import this GitHub repository into Vercel. Keep the project root as the repository root; `vercel.json` selects the **Other** framework preset and disables the build command, so static files and `/api` functions are deployed separately.
 3. In Vercel, open **Project Settings → Environment Variables** and add `DATABASE_URL` with the Neon connection string. Add `ADMIN_TOKEN` with a long private value if you use the admin API.
 4. Apply those variables to the environments you deploy (Production, and Preview if needed), then redeploy.
 5. Check `https://your-domain/api/health`; it should return `{"status":"ok","storage":"postgres"}`. The home page should load at `https://your-domain/`.
