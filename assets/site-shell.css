@@ -266,6 +266,20 @@
         #202326;
 }
 
+.metrics-section::after {
+    position: absolute;
+    z-index: -1;
+    top: -220px;
+    right: -180px;
+    width: min(62vw, 680px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(243, 107, 33, .12), transparent 68%);
+    content: "";
+    pointer-events: none;
+    animation: metrics-glow-drift 12s ease-in-out infinite alternate;
+}
+
 .metrics-section::before {
     position: absolute;
     z-index: -1;
@@ -295,6 +309,16 @@
     transition: transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
 }
 
+.metrics-section .metric-card::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .08) 48%, transparent 66%);
+    content: "";
+    opacity: 0;
+    transform: translateX(-110%);
+    pointer-events: none;
+}
+
 .metrics-section .metric-card::before {
     position: absolute;
     top: 0;
@@ -315,6 +339,12 @@
     box-shadow: 0 20px 42px rgba(0, 0, 0, .2);
 }
 
+.metrics-section .metric-card:hover::after {
+    opacity: 1;
+    transform: translateX(110%);
+    transition: transform .75s ease, opacity .2s ease;
+}
+
 .metrics-section .metric-card:hover::before {
     width: 78px;
 }
@@ -330,6 +360,10 @@
     line-height: 1;
     letter-spacing: -.055em;
     font-variant-numeric: tabular-nums;
+}
+
+.metrics-section .metric-value.is-counted {
+    animation: metric-value-pop .45s cubic-bezier(.2, .8, .2, 1) both;
 }
 
 .metrics-section .metric-label {
@@ -349,17 +383,30 @@
 
 .metrics-section.is-ready .metric-card {
     opacity: 0;
-    transform: translateY(18px);
+    filter: blur(4px);
+    transform: translateY(22px) scale(.97);
 }
 
 .metrics-section.is-ready.is-visible .metric-card {
     opacity: 1;
-    transform: translateY(0);
+    filter: blur(0);
+    transform: translateY(0) scale(1);
     transition-delay: var(--metric-delay, 0ms);
 }
 
 .metrics-section.is-ready.is-visible .metric-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1);
+}
+
+@keyframes metrics-glow-drift {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-65px, 45px, 0); }
+}
+
+@keyframes metric-value-pop {
+    0% { transform: scale(.92); }
+    65% { transform: scale(1.07); }
+    100% { transform: scale(1); }
 }
 
 .quote-section {
@@ -458,9 +505,16 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .metrics-section::after {
+        animation: none !important;
+    }
+
     .metrics-section .metric-card,
-    .metrics-section .metric-card::before {
+    .metrics-section .metric-card::before,
+    .metrics-section .metric-card::after,
+    .metrics-section .metric-value.is-counted {
         transition: none !important;
+        animation: none !important;
     }
 
     .quote-section .quote-copy,

@@ -18,6 +18,7 @@
     const target = Number(element.dataset.count);
     if (!Number.isFinite(target)) return;
     element.textContent = formatCount(element, target);
+    if (!reducedMotion) element.closest('.metric-value')?.classList.add('is-counted');
   }
 
   function animateCount(element) {
