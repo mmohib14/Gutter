@@ -3,7 +3,7 @@ const fs = require('node:fs/promises');
 const os = require('node:os');
 const path = require('node:path');
 const { after, before, test } = require('node:test');
-const { createServer } = require('../server');
+const { createServer } = require('../local-server');
 
 const temporaryDirectory = path.join(os.tmpdir(), `apexgutters-test-${process.pid}`);
 const adminToken = 'test-only-admin-token';

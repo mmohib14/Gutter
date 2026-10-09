@@ -10,7 +10,7 @@ Install Node.js 20 or newer, then run from this folder:
 npm start
 ```
 
-Open <http://127.0.0.1:3000>. Set `PORT` to use a different port and `DATA_FILE` to choose a different JSON database path. `HOST` defaults to `127.0.0.1` so the site and submitted contact details stay on the local computer.
+Open <http://127.0.0.1:3000>. Set `PORT` to use a different port and `DATA_FILE` to choose a different JSON database path. `HOST` defaults to `127.0.0.1` so the site and submitted contact details stay on the local computer. The local-only server lives in `local-server.js`; Vercel serves the pages and API through its static hosting and `api/` functions.
 
 ## API
 
@@ -37,7 +37,7 @@ The repository includes Vercel serverless handlers for the API and serves the si
 2. Import this GitHub repository into Vercel. Keep the project root as the repository root; no build command or output directory is required.
 3. In Vercel, open **Project Settings → Environment Variables** and add `DATABASE_URL` with the Neon connection string. Add `ADMIN_TOKEN` with a long private value if you use the admin API.
 4. Apply those variables to the environments you deploy (Production, and Preview if needed), then redeploy.
-5. Check `https://your-domain/api/health`; it should return `{"status":"ok","storage":"postgres"}`.
+5. Check `https://your-domain/api/health`; it should return `{"status":"ok","storage":"postgres"}`. The home page should load at `https://your-domain/`.
 
 The database tables are created automatically the first time an API endpoint connects. Keep `DATABASE_URL` and `ADMIN_TOKEN` in Vercel environment variables only—never commit them to GitHub. Form submissions made before deployment remain in the local `data/site-data.json` and are not copied to Postgres automatically.
 
