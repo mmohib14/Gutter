@@ -57,13 +57,23 @@ test('serves the contact page and links the shared quote buttons to it', async (
   assert.equal(header.status, 200);
   const headerMarkup = await header.text();
   assert.doesNotMatch(headerMarkup, /data-page-link="(?:blog|contact)"/);
+  assert.doesNotMatch(headerMarkup, /href="\/(?:why_choose_us_apexgutters\.html|team\.html|apexgutters_services_page%20\(1\)\.html#faqAccordion)"/);
+  assert.doesNotMatch(headerMarkup, /sharedPagesMenu|>\s*Pages\s*</);
+  assert.match(headerMarkup, /class="shared-top-link" data-page-link="about" href="\/apexgutters_about_us_page\.html">About<\/a>/);
+  assert.match(headerMarkup, /<\/div>\s*<a class="shared-top-link" href="\/apexgutters_services_page%20\(1\)\.html#quote-form">Cost Estimator<\/a>/);
   assert.equal((headerMarkup.match(/href="\/contact\.html#contact-form"/g) || []).length, 2);
+  assert.equal((headerMarkup.match(/href="tel:18884887767"/g) || []).length, 2);
+  assert.match(headerMarkup, /class="shared-mobile-actions"/);
+  assert.match(headerMarkup, /href="tel:18884887767"/);
 
   const footer = await fetch(`${baseUrl}/partials/footer.html`);
   assert.equal(footer.status, 200);
   const footerMarkup = await footer.text();
   assert.match(footerMarkup, /href="\/blog\.html">Blog<\/a>/);
   assert.match(footerMarkup, /href="\/contact\.html">Contact<\/a>/);
+  assert.match(footerMarkup, /href="\/why_choose_us_apexgutters\.html">Why GutterPro<\/a>/);
+  assert.match(footerMarkup, /href="\/team\.html">Certified Technicians<\/a>/);
+  assert.match(footerMarkup, /href="\/apexgutters_services_page%20\(1\)\.html#faqAccordion">Frequently Asked Questions<\/a>/);
 });
 
 test('validates leads and persists submitted quote requests', async () => {

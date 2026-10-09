@@ -39,7 +39,8 @@
   function initializeSharedHeader(header) {
     const menuToggle = header.querySelector('.shared-menu-toggle');
     const dropdownToggles = header.querySelectorAll('.shared-dropdown-toggle');
-    const mobileNavigation = window.matchMedia('(max-width: 1199.98px)');
+    const mobileNavigation = window.matchMedia('(max-width: 767.98px)');
+    const updateScrollState = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
     const page = decodeURIComponent(window.location.pathname).toLowerCase();
     const activePage = page === '/' || page.endsWith('apexgutters_landing_page.html') ? 'home'
       : page.endsWith('apexgutters_about_us_page.html') ? 'about'
@@ -72,6 +73,18 @@
           ?.classList.add('is-current');
       }
     }
+
+    let scrollUpdateQueued = false;
+    function handleScroll() {
+      if (scrollUpdateQueued) return;
+      scrollUpdateQueued = true;
+      window.requestAnimationFrame(() => {
+        updateScrollState();
+        scrollUpdateQueued = false;
+      });
+    }
+    updateScrollState();
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     for (const toggle of dropdownToggles) {
       toggle.addEventListener('click', () => {
