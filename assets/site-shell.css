@@ -981,14 +981,6 @@
         transition: none !important;
     }
 
-    .marquee-content {
-        animation: none !important;
-        transform: none !important;
-    }
-
-    .marquee-content[aria-hidden="true"] {
-        display: none;
-    }
 }
 
 @media (max-width: 767.98px) {
