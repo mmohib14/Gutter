@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact ApexGutters for a free gutter installation, repair, or maintenance quote.">
+    <title>Contact Us | ApexGutters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/site-shell.css?v=header-20261008-6">
+    <style>
+        :root {
+            --contact-orange: #f36b21;
+            --contact-ink: #202326;
+            --contact-text: #5d6268;
+            --contact-border: #e7e7e4;
+            --contact-surface: #f6f6f4;
+        }
+
+        body {
+            color: var(--contact-text);
+            font-family: Manrope, sans-serif;
+        }
+
+        .contact-hero {
+            padding: 76px 0 64px;
+            background: linear-gradient(120deg, #202326 0%, #34383c 100%);
+            color: #fff;
+        }
+
+        .contact-eyebrow {
+            color: #ff9a60;
+            font-size: .82rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .contact-hero h1 {
+            max-width: 720px;
+            margin: 12px 0;
+            color: #fff;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -.04em;
+        }
+
+        .contact-hero p {
+            max-width: 650px;
+            margin: 0;
+            color: #d2d5d7;
+            font-size: 1.08rem;
+        }
+
+        .contact-section {
+            padding: 72px 0 88px;
+        }
+
+        .contact-form-card,
+        .contact-info-card {
+            height: 100%;
+            padding: clamp(24px, 4vw, 40px);
+            border: 1px solid var(--contact-border);
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 8px 30px rgba(20, 25, 30, .07);
+        }
+
+        .contact-form-card h2,
+        .contact-info-card h2 {
+            color: var(--contact-ink);
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -.03em;
+        }
+
+        .contact-field-label {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--contact-ink);
+            font-size: .88rem;
+            font-weight: 700;
+        }
+
+        .contact-field {
+            width: 100%;
+            min-height: 50px;
+            padding: 12px 14px;
+            border: 1px solid var(--contact-border);
+            border-radius: 6px;
+            color: var(--contact-ink);
+            background: #fff;
+            font: inherit;
+            font-size: .94rem;
+        }
+
+        textarea.contact-field {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .contact-field:focus {
+            border-color: var(--contact-orange);
+            outline: 0;
+            box-shadow: 0 0 0 3px rgba(243, 107, 33, .15);
+        }
+
+        .contact-submit {
+            display: inline-flex;
+            min-height: 50px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border: 1px solid var(--contact-orange);
+            border-radius: 7px;
+            color: #fff;
+            background: var(--contact-orange);
+            font: inherit;
+            font-weight: 800;
+            transition: background .2s ease, border-color .2s ease;
+        }
+
+        .contact-submit:hover {
+            border-color: #d95412;
+            background: #d95412;
+        }
+
+        .contact-submit:disabled {
+            cursor: wait;
+            opacity: .7;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .contact-detail-icon {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            place-items: center;
+            border-radius: 50%;
+            color: var(--contact-orange);
+            background: rgba(243, 107, 33, .1);
+        }
+
+        .contact-detail strong {
+            display: block;
+            margin-bottom: 3px;
+            color: var(--contact-ink);
+        }
+
+        .contact-detail a {
+            color: var(--contact-text);
+            text-decoration: none;
+        }
+
+        .contact-detail a:hover {
+            color: var(--contact-orange);
+        }
+
+        .contact-promise {
+            margin-top: 30px;
+            padding: 18px;
+            border-radius: 8px;
+            background: var(--contact-surface);
+            color: var(--contact-text);
+            font-size: .9rem;
+        }
+
+        .contact-promise i {
+            margin-right: 8px;
+            color: var(--contact-orange);
+        }
+
+        .contact-feedback {
+            margin: 12px 0 0;
+            font-size: .9rem;
+        }
+
+        .contact-feedback.is-success { color: #187848; }
+        .contact-feedback.is-error { color: #b42318; }
+
+        @media (max-width: 767.98px) {
+            .contact-hero { padding: 56px 0 48px; }
+            .contact-section { padding: 48px 0 60px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-topbar" aria-hidden="true"></div>
+    <nav class="navbar site-navbar" aria-label="Main navigation"></nav>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <span class="contact-eyebrow">We’re ready to help</span>
+                <h1>Let’s protect your home from the next storm.</h1>
+                <p>Tell us what you need and our gutter specialists will get back to you to discuss the right solution for your home.</p>
+            </div>
+        </section>
+
+        <section class="contact-section" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="row g-4 g-xl-5">
+                    <div class="col-lg-7" id="contact-form">
+                        <div class="contact-form-card">
+                            <h2 id="contact-heading">Request a free quote</h2>
+                            <p class="mb-4">Share a few details and our team will follow up shortly.</p>
+                            <form data-api-form="quote" data-email-required="true">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="contact-field-label" for="contactName">Full name</label>
+                                        <input class="contact-field" id="contactName" name="name" type="text" autocomplete="name" minlength="2" maxlength="100" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="contact-field-label" for="contactEmail">Email address</label>
+                                        <input class="contact-field" id="contactEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="contact-field-label" for="contactPhone">Phone number</label>
+                                        <input class="contact-field" id="contactPhone" name="phone" type="tel" autocomplete="tel" minlength="7" maxlength="40" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="contact-field-label" for="contactService">Service needed</label>
+                                        <select class="contact-field" id="contactService" name="service" required>
+                                            <option value="">Choose a service</option>
+                                            <option>Seamless gutter installation</option>
+                                            <option>Gutter repair or replacement</option>
+                                            <option>Gutter cleaning and inspection</option>
+                                            <option>Leaf guard protection</option>
+                                            <option>Downspout and drainage solutions</option>
+                                            <option>Other gutter service</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="contact-field-label" for="contactMessage">How can we help? <span class="fw-normal">(optional)</span></label>
+                                        <textarea class="contact-field" id="contactMessage" name="message" maxlength="3000" placeholder="Tell us a little about your project"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="contact-submit" type="submit">
+                                            Send my request <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                                        </button>
+                                        <p class="contact-feedback" data-form-feedback role="status" aria-live="polite" hidden></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <aside class="col-lg-5" aria-label="Contact information">
+                        <div class="contact-info-card">
+                            <h2>Talk to a gutter specialist</h2>
+                            <p>Prefer to speak with someone? Give us a call or send us an email.</p>
+                            <div class="contact-detail">
+                                <span class="contact-detail-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                                <div><strong>Call our team</strong><a href="tel:18005554887">(800) 555-GUTR</a></div>
+                            </div>
+                            <div class="contact-detail">
+                                <span class="contact-detail-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                                <div><strong>Email us</strong><a href="mailto:info@apexgutters.com">info@apexgutters.com</a></div>
+                            </div>
+                            <div class="contact-detail">
+                                <span class="contact-detail-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                                <div><strong>Business hours</strong><span>Monday – Saturday, 7:00 AM – 6:00 PM</span></div>
+                            </div>
+                            <div class="contact-promise"><i class="fa-solid fa-circle-check" aria-hidden="true"></i>Free estimates, no pressure, and a real local team ready to help.</div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"></footer>
+    <script src="assets/backend.js"></script>
+    <script src="assets/shared-shell.js?v=header-20261008-6"></script>
+</body>
+</html>

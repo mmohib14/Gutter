@@ -1,0 +1,13 @@
+{
+  "name": "apexgutters-local-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Node.js backend for the ApexGutters website",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

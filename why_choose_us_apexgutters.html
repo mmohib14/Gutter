@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us | ApexGutters - Precision Gutter Solutions</title>
+    <!-- Google Fonts - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-orange: #F36B21;
+            --primary-orange-hover: #d85710;
+            --deep-charcoal: #202326;
+            --ink-navy: #171A1D;
+            --light-bg: #F8F9FA;
+            --border-color: #E2E8F0;
+            --text-muted: #64748B;
+            --text-heading: #0F172A;
+            --font-main: 'Manrope', sans-serif;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 20px 40px rgba(243, 107, 33, 0.12);
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: #334155;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-heading);
+            font-weight: 800;
+        }
+
+        /* Top Info Bar */
+        .top-bar {
+            background-color: var(--ink-navy);
+            color: #A1A1AA;
+            font-size: 0.875rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .top-bar a {
+            color: #E4E4E7;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .top-bar a:hover {
+            color: var(--primary-orange);
+        }
+
+        .emergency-badge {
+            background-color: rgba(243, 107, 33, 0.15);
+            color: var(--primary-orange);
+            border: 1px solid rgba(243, 107, 33, 0.3);
+            border-radius: 50px;
+            padding: 2px 10px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        /* Navigation Header */
+        .navbar {
+            background-color: #FFFFFF;
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--ink-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-icon-shield {
+            background: linear-gradient(135deg, var(--primary-orange), #ff8a48);
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(243, 107, 33, 0.3);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--ink-navy);
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-orange) !important;
+        }
+
+        .btn-custom-orange {
+            background-color: var(--primary-orange);
+            color: #FFFFFF;
+            font-weight: 700;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(243, 107, 33, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-custom-orange:hover {
+            background-color: var(--primary-orange-hover);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(243, 107, 33, 0.35);
+        }
+
+        /* Hero Section */
+        .hero-breadcrumb {
+            background-color: var(--deep-charcoal);
+            background-image: radial-gradient(rgba(243, 107, 33, 0.12) 1px, transparent 0);
+            background-size: 32px 32px;
+            padding: 5rem 0 4rem;
+            position: relative;
+            color: #FFFFFF;
+            border-bottom: 4px solid var(--primary-orange);
+        }
+
+        .hero-breadcrumb .breadcrumb {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 16px;
+            border-radius: 50px;
+            display: inline-flex;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-breadcrumb .breadcrumb-item,
+        .hero-breadcrumb .breadcrumb-item a {
+            color: #CBD5E1;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-breadcrumb .breadcrumb-item.active {
+            color: var(--primary-orange);
+            font-weight: 700;
+        }
+
+        .eyebrow-label {
+            color: var(--primary-orange);
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 5.5rem 0;
+        }
+
+        .bg-light-custom {
+            background-color: var(--light-bg);
+        }
+
+        /* Value Prop Collage */
+        .collage-wrapper {
+            position: relative;
+        }
+
+        .main-collage-img {
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .badge-floating-experience {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--ink-navy);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 14px;
+            border-left: 5px solid var(--primary-orange);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            z-index: 2;
+        }
+
+        .badge-floating-satisfaction {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background: #FFFFFF;
+            padding: 0.85rem 1.25rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        /* Check List Item */
+        .check-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--text-heading);
+        }
+
+        .check-icon-pill {
+            background-color: rgba(243, 107, 33, 0.12);
+            color: var(--primary-orange);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* Differentiators Grid */
+        .diff-card {
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-orange);
+            border-radius: 12px;
+            padding: 2.25rem;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: var(--card-shadow);
+        }
+
+        .diff-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--border-color);
+            border-top-color: var(--primary-orange);
+        }
+
+        .diff-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(243, 107, 33, 0.1), rgba(243, 107, 33, 0.03));
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(243, 107, 33, 0.2);
+        }
+
+        /* Comparison Table */
+        .table-comparison-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .table-comparison {
+            margin-bottom: 0;
+            background: #FFFFFF;
+        }
+
+        .table-comparison th {
+            padding: 1.25rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .table-comparison td {
+            padding: 1.1rem 1.5rem;
+            vertical-align: middle;
+            font-size: 0.95rem;
+            border-color: #F1F5F9;
+        }
+
+        .col-apex {
+            background-color: rgba(243, 107, 33, 0.03);
+            border-left: 2px solid var(--primary-orange);
+            border-right: 2px solid var(--primary-orange);
+        }
+
+        .col-apex-header {
+            background-color: var(--ink-navy) !important;
+            color: #FFFFFF !important;
+            border-top: 4px solid var(--primary-orange);
+        }
+
+        .badge-winner {
+            background-color: var(--primary-orange);
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 8px;
+        }
+
+        /* Process Steps */
+        .process-step-card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .process-step-card:hover {
+            box-shadow: var(--card-shadow);
+            border-color: var(--primary-orange);
+        }
+
+        .step-number {
+            width: 45px;
+            height: 45px;
+            background-color: var(--ink-navy);
+            color: #FFFFFF;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            border: 3px solid var(--primary-orange);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background-color: #FFFFFF;
+            border-radius: 14px;
+            padding: 2rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars-rating {
+            color: #F59E0B;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #F1F5F9;
+        }
+
+        .client-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Quote Banner */
+        .cta-quote-banner {
+            background: linear-gradient(135deg, var(--ink-navy), var(--deep-charcoal));
+            border-radius: 20px;
+            padding: 3.5rem 3rem;
+            color: #FFFFFF;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-quote-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(243, 107, 33, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Form Controls */
+        .form-control-custom {
+            background-color: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+        }
+
+        .form-control-custom::placeholder {
+            color: #94A3B8;
+        }
+
+        .form-control-custom:focus {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: var(--primary-orange);
+            color: #FFFFFF;
+            box-shadow: none;
+        }
+
+        /* Footer */
+        .footer-main {
+            background-color: var(--ink-navy);
+            color: #94A3B8;
+            padding-top: 4.5rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-heading {
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--primary-orange);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-orange);
+            padding-left: 4px;
+        }
+
+        .social-icon-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #FFFFFF;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon-btn:hover {
+            background-color: var(--primary-orange);
+            color: #FFFFFF;
+            transform: translateY(-3px);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(243, 107, 33, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-orange-hover);
+            color: white;
+            transform: translateY(-4px);
+        }
+    </style>
+    <link rel="stylesheet" href="assets/site-shell.css?v=metrics-20261009-1">
+</head>
+<body>
+
+    <!-- 1. TOP INFO BAR -->
+    <div class="site-topbar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9">
+                    <div class="d-flex align-items-center gap-4">
+                        <span><i class="fa-solid fa-location-dot text-warning me-2"></i>1248 Skyline Blvd, Metro City, NY</span>
+                        <span><i class="fa-solid fa-clock text-warning me-2"></i>Mon - Sat: 7:00 AM - 6:00 PM</span>
+                        <span><i class="fa-solid fa-shield-halved text-warning me-2"></i>Licensed &amp; fully insured</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-end">
+                    <a href="tel:18005554887"><i class="fa-solid fa-phone me-2 text-warning"></i>(800) 555-GUTR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN NAVIGATION HEADER -->
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="apexgutters_landing_page.html" aria-label="ApexGutters home">
+                <i class="fa-solid fa-house-chimney-crack site-brand-icon"></i>
+                <span class="site-brand-text">Apex<span>Gutters</span></span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_landing_page.html#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_about_us_page.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_services_page%20(1).html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link active" href="why_choose_us_apexgutters.html" aria-current="page">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="blog.html">Blog</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="site-phone-box">
+                        <span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span>
+                        <span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span>
+                    </div>
+                    <a href="apexgutters_landing_page.html#quote" class="site-quote-button site-shell-focus">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO BREADCRUMB SECTION -->
+    <section class="hero-breadcrumb">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-3">
+                            <li class="breadcrumb-item"><a href="apexgutters_landing_page.html#hero">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Why Choose Us</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-4 text-white fw-extrabold mb-3">Why Homeowners Choose ApexGutters</h1>
+                    <p class="lead text-light mb-0 opacity-90 max-w-2xl">
+                        Discover why thousands of homeowners trust ApexGutters for precision drainage, lifetime durability, and uncompromised quality.
+                    </p>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block text-end">
+                    <i class="fa-solid fa-award text-warning opacity-25" style="font-size: 9rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EXECUTIVE ADVANTAGE STATEMENT / VALUE PROPOSITION -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="collage-wrapper pe-lg-3">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="ApexGutters Professional Installation" class="main-collage-img" onerror="this.src='https://placehold.co/800x600/202326/F36B21?text=Gutter+Installation+Expert'">
+                        
+                        <div class="badge-floating-experience d-none d-sm-block">
+                            <div class="h2 mb-0 fw-bold text-warning">20+</div>
+                            <div class="small text-uppercase text-light font-monospace fw-semibold">Years Experience</div>
+                        </div>
+
+                        <div class="badge-floating-satisfaction">
+                            <i class="fa-solid fa-circle-check text-success fs-3"></i>
+                            <div>
+                                <div class="fw-bold text-dark lh-1">99.4% Rating</div>
+                                <small class="text-muted">Verified Homeowner Trust</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="eyebrow-label">WHY HOMEOWNERS TRUST US</span>
+                    <h2 class="display-6 mb-3">The Gold Standard in Residential Gutter Protection & Installation</h2>
+                    <p class="text-muted mb-4">
+                        At ApexGutters, we don't believe in standard off-the-shelf gutter systems. We engineer customized water management solutions crafted on-site specifically for your home's roofline. Our seamless systems prevent foundation erosion, siding rot, and landscape washouts.
+                    </p>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="check-list-item">
+                                <div class="check-icon-pill"><i class="fa-solid fa-check"></i></div>
+                                <span>100% Seamless Custom On-Site Fabrication</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="check-list-item">
+                                <div class="check-icon-pill"><i class="fa-solid fa-check"></i></div>
+                                <span>Lifetime Transferable Material Warranty</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="check-list-item">
+                                <div class="check-icon-pill"><i class="fa-solid fa-check"></i></div>
+                                <span>Licensed, Bonded & Fully Insured Crew</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="check-list-item">
+                                <div class="check-icon-pill"><i class="fa-solid fa-check"></i></div>
+                                <span>Zero-Mess Cleanup Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#quote-form" class="btn btn-custom-orange">
+                        Schedule Free Inspection <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CORE KEY DIFFERENTIATORS GRID -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto mb-5">
+                <span class="eyebrow-label">OUR COMPETITIVE EDGE</span>
+                <h2 class="display-6 fw-bold">Why We Stand Above Other Service Providers</h2>
+                <p class="text-muted">We combine heavy-duty materials, advanced engineering standards, and unmatched customer service to protect your biggest investment.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="diff-card">
+                        <div class="diff-icon">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Engineered Precision</h4>
+                        <p class="text-muted mb-0">Custom-fit heavy gauge aluminum and copper gutters rolled directly on-site for a seamless fit without weak leak points.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="diff-card">
+                        <div class="diff-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h4 class="h5 mb-3">20+ Years Experience</h4>
+                        <p class="text-muted mb-0">Two decades of local hands-on experience mastering extreme weather conditions, heavy rainfall, and ice damming solutions.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="diff-card">
+                        <div class="diff-icon">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Honest Upfront Pricing</h4>
+                        <p class="text-muted mb-0">No hidden fees, surprise charges, or pushy sales tactics. Clear itemized estimates with flexible payment financing options.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="diff-card">
+                        <div class="diff-icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Rapid Emergency Response</h4>
+                        <p class="text-muted mb-0">24/7 priority emergency dispatch for severe storm damage, fallen gutters, and critical water leaks threatening your foundation.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="diff-card">
+                        <div class="diff-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Certified & Insured Crew</h4>
+                        <p class="text-muted mb-0">Background-checked, background-verified technicians certified in OSHA safety standards and specialized gutter installation.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="diff-card">
+                        <div class="diff-icon">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Lifetime Warranty Shield</h4>
+                        <p class="text-muted mb-0">Comprehensive coverage on materials, finish, and labor performance that stays transferable if you choose to sell your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. INTERACTIVE COMPARISON TABLE -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="eyebrow-label">CLEAR PROOF</span>
+                <h2 class="display-6 fw-bold">ApexGutters vs. Standard Contractors</h2>
+                <p class="text-muted">Compare our heavy-duty standards against general handymen and typical contractors.</p>
+            </div>
+
+            <div class="table-comparison-wrapper table-responsive">
+                <table class="table table-comparison align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width: 35%; background-color: var(--light-bg);">Feature / Quality Metric</th>
+                            <th scope="col" class="col-apex col-apex-header text-center" style="width: 32%;">
+                                <div class="d-flex align-items-center justify-content-center gap-2">
+                                    <i class="fa-solid fa-shield-halved text-warning"></i> ApexGutters <span class="badge-winner">Superior</span>
+                                </div>
+                            </th>
+                            <th scope="col" class="text-center text-muted" style="width: 33%; background-color: var(--light-bg);">Standard Contractors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">Gutter Fabrication Method</td>
+                            <td class="col-apex text-center fw-bold text-success"><i class="fa-solid fa-check-circle me-2"></i>Seamless Roll-Formed On-Site</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i>Pre-cut Sectional (Multiple Seams)</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Material Thickness Gauge</td>
+                            <td class="col-apex text-center fw-bold text-success"><i class="fa-solid fa-check-circle me-2"></i>Heavy-Duty 0.032" Heavy Aluminum</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i>Standard Thin 0.024" Vinyl or Aluminum</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Hanger Brackets & Fastening</td>
+                            <td class="col-apex text-center fw-bold text-success"><i class="fa-solid fa-check-circle me-2"></i>Heavy-Duty Hidden Hangers Every 24"</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i>Exposed Spike & Ferrule (Gaps 36"+)</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Warranty Coverage</td>
+                            <td class="col-apex text-center fw-bold text-success"><i class="fa-solid fa-check-circle me-2"></i>Lifetime Transferable Labor & Material</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i>1-2 Years Limited Workmanship</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Property Protection & Cleanup</td>
+                            <td class="col-apex text-center fw-bold text-success"><i class="fa-solid fa-check-circle me-2"></i>Magnetic Sweep & Zero-Mess Guarantee</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i>Basic Sweep (Debris Left Behind)</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Licensing & Safety Certification</td>
+                            <td class="col-apex text-center fw-bold text-success"><i class="fa-solid fa-check-circle me-2"></i>Full OSHA Certified, Bonded & Insured</td>
+                            <td class="text-center text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i>Basic General Insurance Only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ANIMATED STATISTICS & PERFORMANCE METRICS -->
+    <section class="metrics-section" aria-label="Company performance">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <article class="metric-card">
+                        <div class="metric-value"><span data-count="15000">15,000</span>+</div>
+                        <p class="metric-label">Homes Protected</p>
+                    </article>
+                </div>
+                <div class="col-6 col-md-3">
+                    <article class="metric-card">
+                        <div class="metric-value"><span data-count="99.4" data-decimals="1">99.4</span>%</div>
+                        <p class="metric-label">Satisfaction Rate</p>
+                    </article>
+                </div>
+                <div class="col-6 col-md-3">
+                    <article class="metric-card">
+                        <div class="metric-value"><span data-count="25">25</span>+</div>
+                        <p class="metric-label">Years Operating</p>
+                    </article>
+                </div>
+                <div class="col-6 col-md-3">
+                    <article class="metric-card">
+                        <div class="metric-value"><span data-count="100">100</span>%</div>
+                        <p class="metric-label">No-Leak Guarantee</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. QUALITY ASSURANCE PROCESS -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto mb-5">
+                <span class="eyebrow-label">OUR STEP-BY-STEP PROCESS</span>
+                <h2 class="display-6 fw-bold">Precision Quality From Start to Finish</h2>
+                <p class="text-muted">How we ensure flawless drainage performance on every single installation.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-2-4">
+                    <div class="process-step-card">
+                        <div class="step-number">1</div>
+                        <h5 class="fw-bold mb-2">21-Pt Audit</h5>
+                        <p class="small text-muted mb-0">Comprehensive inspection of rooflines, fascia, and drainage points.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2-4">
+                    <div class="process-step-card">
+                        <div class="step-number">2</div>
+                        <h5 class="fw-bold mb-2">On-Site Rolling</h5>
+                        <p class="small text-muted mb-0">Custom roll-forming seamless gutters to exact roof dimensions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2-4">
+                    <div class="process-step-card">
+                        <div class="step-number">3</div>
+                        <h5 class="fw-bold mb-2">Laser Alignment</h5>
+                        <p class="small text-muted mb-0">Precise pitch laser calibration for optimal water flow velocity.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2-4">
+                    <div class="process-step-card">
+                        <div class="step-number">4</div>
+                        <h5 class="fw-bold mb-2">High-Grade Seal</h5>
+                        <p class="small text-muted mb-0">Commercial silicone sealants on all downspouts and endcaps.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2-4">
+                    <div class="process-step-card">
+                        <div class="step-number">5</div>
+                        <h5 class="fw-bold mb-2">Quality Audit</h5>
+                        <p class="small text-muted mb-0">Final water test, magnetic site sweep, and homeowner walkthrough.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CLIENT TESTIMONIALS SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center max-w-xl mx-auto mb-5">
+                <span class="eyebrow-label">REAL HOMEOWNER REVIEWS</span>
+                <h2 class="display-6 fw-bold">Trusted by Your Neighbors</h2>
+                <p class="text-muted">Read feedback from real clients who experienced the ApexGutters difference.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="stars-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-muted italic mb-0">"ApexGutters replaced our old leaky gutters after a heavy rainstorm. Their crew was on time, super professional, and the seamless aluminum gutters look incredible."</p>
+                        </div>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Client Sarah M." class="client-avatar" onerror="this.src='https://placehold.co/100x100/202326/FFFFFF?text=SM'">
+                            <div>
+                                <div class="fw-bold text-dark">Sarah M.</div>
+                                <small class="text-muted"><i class="fa-solid fa-location-dot me-1 text-warning"></i>Oakridge Estates</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="stars-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-muted italic mb-0">"The gutter guards they installed survived two massive autumn leaf drops without clogging once. Worth every penny for peace of mind."</p>
+                        </div>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Client David K." class="client-avatar" onerror="this.src='https://placehold.co/100x100/202326/FFFFFF?text=DK'">
+                            <div>
+                                <div class="fw-bold text-dark">David K.</div>
+                                <small class="text-muted"><i class="fa-solid fa-location-dot me-1 text-warning"></i>Highland Park</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="stars-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-muted italic mb-0">"Extremely honest company. They inspected my system and fixed a minor pitch issue instead of forcing me to replace the whole line. Highly recommend!"</p>
+                        </div>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Client Elena R." class="client-avatar" onerror="this.src='https://placehold.co/100x100/202326/FFFFFF?text=ER'">
+                            <div>
+                                <div class="fw-bold text-dark">Elena R.</div>
+                                <small class="text-muted"><i class="fa-solid fa-location-dot me-1 text-warning"></i>Westlake Village</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. HIGH-CONVERSION QUOTE CTA BANNER -->
+    <section class="section-padding pt-0" id="quote-form">
+        <div class="container">
+            <div class="cta-quote-banner">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge bg-warning text-dark font-monospace mb-3 px-3 py-2 fw-bold">LIMITED TIME OFFER</span>
+                        <h2 class="display-6 text-white fw-bold mb-3">Claim Your Free 21-Point Gutter Health Inspection</h2>
+                        <p class="text-light opacity-90 mb-4">
+                            Don't wait for heavy rainfall to damage your foundation or fascia board. Contact ApexGutters today for a zero-obligation precision estimate.
+                        </p>
+                        <div class="d-flex flex-wrap gap-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                                <span>Zero Pushy Sales Tactics</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-warning fs-5"></i>
+                                <span>Instant Itemized Quote</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="p-4 rounded-4" style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <form id="freeInspectionForm" data-api-form="inspection">
+                                <div class="mb-3">
+                                    <input type="text" name="name" class="form-control form-control-custom" placeholder="Full Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" name="phone" class="form-control form-control-custom" placeholder="Phone Number (+1)" required>
+                                </div>
+                                <div class="mb-3">
+                                    <select name="service" class="form-select form-control-custom" required>
+                                        <option value="" selected disabled>Select Primary Need</option>
+                                        <option value="installation">New Seamless Gutter Installation</option>
+                                        <option value="guards">Gutter Guard Protection</option>
+                                        <option value="repair">Gutter Repair / Leak Fix</option>
+                                        <option value="cleaning">Commercial Drainage Solution</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-custom-orange w-100 py-3 justify-content-center">
+                                    <i class="fa-solid fa-paper-plane me-2"></i> REQUEST FREE INSPECTION
+                                </button>
+                                <p class="form-feedback mt-3 mb-0" data-form-feedback role="status" aria-live="polite" hidden></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="site-footer-brand" href="apexgutters_landing_page.html"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a>
+                    <p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h2 class="site-footer-heading">Quick links</h2>
+                    <ul class="site-footer-links">
+                        <li><a href="apexgutters_landing_page.html#hero">Home</a></li>
+                        <li><a href="apexgutters_about_us_page.html">About Us</a></li>
+                        <li><a href="apexgutters_services_page%20(1).html">Services</a></li>
+                        <li><a href="why_choose_us_apexgutters.html">Why Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="team.html">Our team</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 col-lg-3">
+                    <h2 class="site-footer-heading">Services</h2>
+                    <ul class="site-footer-links">
+                        <li><a href="apexgutters_services_page%20(1).html">Seamless gutters</a></li>
+                        <li><a href="apexgutters_services_page%20(1).html">Custom copper</a></li>
+                        <li><a href="apexgutters_services_page%20(1).html">Leaf protection</a></li>
+                        <li><a href="apexgutters_services_page%20(1).html">Downspout drainage</a></li>
+                        <li><a href="apexgutters_services_page%20(1).html">Fascia &amp; soffit</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h2 class="site-footer-heading">Get in touch</h2>
+                    <div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div>
+                    <div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div>
+                    <div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div>
+                    <a class="site-quote-button site-shell-focus mt-2" href="apexgutters_landing_page.html#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>&copy; 2026 ApexGutters. All rights reserved.</span>
+                <span>Built to protect what matters.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Interactive JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Back to Top button handler
+            const backToTopBtn = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            // Smooth scroll to anchor link
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId !== '#') {
+                        e.preventDefault();
+                        const targetElem = document.querySelector(targetId);
+                        if(targetElem) {
+                            targetElem.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
+    <script src="assets/backend.js"></script>
+    <script src="assets/shared-shell.js?v=header-20261008-6"></script>
+    <script src="assets/metrics.js"></script>
+</body>
+</html>
