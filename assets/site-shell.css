@@ -541,13 +541,13 @@
 .shared-header-layout {
     display: grid;
     width: 100%;
-    max-width: 1680px;
+    max-width: 1240px;
     min-height: 76px;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     gap: clamp(12px, 1.5vw, 28px);
     margin: 0 auto;
-    padding: 7px clamp(20px, 2.2vw, 56px);
+    padding: 7px 24px;
     box-sizing: border-box;
 }
 
@@ -839,12 +839,15 @@
 
     .shared-main-menu {
         display: flex;
+        width: auto;
         max-height: 0;
         grid-column: 1 / -1;
         grid-row: 2;
         align-items: stretch;
         flex-direction: column;
         justify-content: flex-start;
+        justify-self: stretch;
+        flex-wrap: nowrap;
         gap: 0;
         min-width: 0;
         margin: 0;
