@@ -563,8 +563,11 @@
 
 .shared-main-menu {
     display: flex;
+    width: max-content;
     justify-content: center;
     align-items: center;
+    justify-self: center;
+    flex-wrap: nowrap;
     gap: clamp(6px, .6vw, 12px);
     min-width: 0;
 }
@@ -664,8 +667,10 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    justify-self: end;
     gap: 13px;
     min-width: max-content;
+    white-space: nowrap;
 }
 
 .shared-emergency {
