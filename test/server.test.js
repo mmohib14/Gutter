@@ -56,8 +56,14 @@ test('serves the contact page and links the shared quote buttons to it', async (
   const header = await fetch(`${baseUrl}/partials/header.html`);
   assert.equal(header.status, 200);
   const headerMarkup = await header.text();
-  assert.match(headerMarkup, /data-page-link="contact" href="\/contact\.html"/);
+  assert.doesNotMatch(headerMarkup, /data-page-link="(?:blog|contact)"/);
   assert.equal((headerMarkup.match(/href="\/contact\.html#contact-form"/g) || []).length, 2);
+
+  const footer = await fetch(`${baseUrl}/partials/footer.html`);
+  assert.equal(footer.status, 200);
+  const footerMarkup = await footer.text();
+  assert.match(footerMarkup, /href="\/blog\.html">Blog<\/a>/);
+  assert.match(footerMarkup, /href="\/contact\.html">Contact<\/a>/);
 });
 
 test('validates leads and persists submitted quote requests', async () => {
