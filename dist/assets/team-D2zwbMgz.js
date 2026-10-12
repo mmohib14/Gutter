@@ -1,4 +1,4 @@
-<!doctype html>
+const a=`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -61,12 +61,25 @@ body{color:#596168;line-height:1.65}
 @media(max-width:767.98px){.team-hero{padding:48px 0 35px}.team-hero .container{min-height:0}.team-hero .container:after{position:relative;top:auto;right:auto;display:block;width:100%;height:220px;margin-top:25px;transform:none;border-radius:16px}.team-hero .container>*{max-width:100%}.team-hero h1{font-size:40px}.team-hero .hero-action{margin-top:18px}.team-section{padding:52px 0}.section-heading{margin-bottom:30px}.team-photo{height:350px}.team-info p{min-height:0}.values{padding:54px 0}.team-cta{padding:52px 0}}
 @media(max-width:420px){.team-hero h1{font-size:35px}.team-photo{height:310px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+.team-bio-button{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;padding:9px 15px;border:1px solid var(--orange);border-radius:6px;background:#fff;color:var(--orange);font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.team-bio-button:hover,.team-bio-button:focus-visible{background:var(--orange);color:#fff}
+.team-bio-dialog{width:min(720px,calc(100% - 28px));max-width:none;max-height:90vh;padding:0;border:0;border-radius:18px;color:#202326;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.team-bio-dialog::backdrop{background:rgba(12,16,19,.72)}
+.team-bio-dialog-panel{position:relative;max-height:90vh;overflow:auto}
+.team-bio-close{position:absolute;z-index:1;top:14px;right:14px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#202326;font-size:25px;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.team-bio-content{display:grid;grid-template-columns:minmax(160px,.8fr) 1.2fr;gap:24px;align-items:center;padding:28px}
+.team-bio-image{width:100%;max-height:340px;object-fit:cover;border-radius:12px}
+.team-bio-content h2{margin:4px 0;color:var(--ink);font-size:clamp(1.4rem,4vw,2rem)}
+.team-bio-role{margin-bottom:12px;color:var(--orange);font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.team-bio-summary{margin:0 0 14px;color:#596168;line-height:1.75}
+.team-bio-tag{color:#596168;font-size:.86rem;font-weight:700}
+@media(max-width:600px){.team-bio-content{grid-template-columns:1fr;gap:16px;padding:22px}.team-bio-image{max-height:260px}.team-bio-close{top:10px;right:10px}}
 </style>
 <link rel="stylesheet" href="assets/site-shell.css?v=marquee-motion-20261009">
 </head>
 <body>
 <div class="site-topbar d-none d-lg-block"><div class="container"><div class="row align-items-center"><div class="col-lg-9"><span class="me-4"><i class="fa-solid fa-location-dot me-2 text-warning"></i>1248 Skyline Blvd, Metro City, NY</span><span class="me-4"><i class="fa-solid fa-clock me-2 text-warning"></i>Mon - Sat: 7:00 AM - 6:00 PM</span><span><i class="fa-solid fa-shield-halved me-2 text-warning"></i>Licensed &amp; fully insured</span></div><div class="col-lg-3 text-end"><a href="tel:18005554887"><i class="fa-solid fa-phone me-2 text-warning"></i>(800) 555-GUTR</a></div></div></div></div>
-<nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation"><div class="container"><a class="navbar-brand" href="apexgutters_landing_page.html" aria-label="ApexGutters home"><i class="fa-solid fa-house-chimney-crack site-brand-icon"></i><span class="site-brand-text">Apex<span>Gutters</span></span></a><button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars fs-2"></i></button><div class="collapse navbar-collapse" id="siteNavbar"><ul class="navbar-nav mx-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_landing_page.html#hero">Home</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_about_us_page.html">About Us</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_services_page%20(1).html">Services</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="why_choose_us_apexgutters.html">Why Us</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="projects.html">Projects</a></li><li class="nav-item"><a class="nav-link site-nav-link active" href="team.html" aria-current="page">Team</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="blog.html">Blog</a></li></ul><div class="d-flex align-items-center"><div class="site-phone-box"><span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span><span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span></div><a class="site-quote-button site-shell-focus" href="apexgutters_landing_page.html#quote">Get a quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></nav>
+<nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation"><div class="container"><a class="navbar-brand" href="/" aria-label="ApexGutters home"><i class="fa-solid fa-house-chimney-crack site-brand-icon"></i><span class="site-brand-text">Apex<span>Gutters</span></span></a><button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars fs-2"></i></button><div class="collapse navbar-collapse" id="siteNavbar"><ul class="navbar-nav mx-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link site-nav-link" href="/#hero">Home</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/about">About Us</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/services">Services</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/why-us">Why Us</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/projects">Projects</a></li><li class="nav-item"><a class="nav-link site-nav-link active" href="/team" aria-current="page">Team</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/blog">Blog</a></li></ul><div class="d-flex align-items-center"><div class="site-phone-box"><span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span><span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span></div><a class="site-quote-button site-shell-focus" href="/#quote">Get Quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></nav>
 <main>
 <section class="team-hero"><div class="container"><span class="eyebrow"><i class="fa-solid fa-circle-check me-1"></i> Our gutter specialists</span><h1>Good work starts with a great team.</h1><p>Meet the people behind every precise measurement, clean installation, and dependable drainage system. Experienced, professional, and ready to protect your property.</p><a class="btn-main hero-action" href="#team-members">Meet the team <i class="fa-solid fa-arrow-down"></i></a></div></section>
 <section class="metrics-section" aria-label="Team highlights"><div class="container"><div class="row g-4"><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="15">15</span>+</div><p class="metric-label">Years of experience</p></article></div><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="6">6</span></div><p class="metric-label">Skilled specialists</p></article></div><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="250">250</span>+</div><p class="metric-label">Projects completed</p></article></div><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="100">100</span>%</div><p class="metric-label">Licensed &amp; insured</p></article></div></div></div></section>
@@ -79,13 +92,68 @@ body{color:#596168;line-height:1.65}
 <div class="col-sm-6 col-lg-4"><article class="team-card"><div class="team-photo"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85" alt="James Wilson, Commercial Drainage Lead" loading="lazy"><div class="socials"><a class="social-btn" href="#"><i class="fa-brands fa-linkedin-in"></i></a><a class="social-btn" href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div><div class="team-info"><h3>James Wilson</h3><div class="team-role">Commercial Drainage Lead</div><p>Handles larger roof drainage systems, oversized downspouts, and complex commercial water-management layouts.</p><span class="team-tag"><i class="fa-solid fa-building"></i> Commercial Specialist</span></div></article></div>
 </div></div></section>
 <section class="values"><div class="container"><div class="section-heading mb-5"><span class="eyebrow">Why Our Team</span><h2>Craftsmanship You Can Count On</h2><p>Every crew member follows the same standards that keep our installations clean, safe, and dependable.</p></div><div class="row g-4"><div class="col-md-4"><div class="value-box"><div class="value-icon"><i class="fa-solid fa-user-shield"></i></div><h3>Trained &amp; Verified</h3><p>Our specialists are selected for field experience, professionalism, and a commitment to safe work practices.</p></div></div><div class="col-md-4"><div class="value-box"><div class="value-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Detail Driven</h3><p>From roofline measurements to outlet placement, we pay attention to the small details that affect long-term performance.</p></div></div><div class="col-md-4"><div class="value-box"><div class="value-icon"><i class="fa-solid fa-broom"></i></div><h3>Clean Job Sites</h3><p>We protect your property during installation and leave the work area organized and ready to use.</p></div></div></div></div></section>
-<section class="team-cta" id="contact"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-8"><span class="eyebrow">Get in touch</span><h2 class="mb-2">Ready for a professional gutter team?</h2><p class="mb-0">Tell us about your property and our specialists can help plan the right gutter and downspout solution.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-main" href="apexgutters_landing_page.html#quote">Request a free quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></section>
+<section class="team-cta" id="contact"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-8"><span class="eyebrow">Get in touch</span><h2 class="mb-2">Ready for a professional gutter team?</h2><p class="mb-0">Tell us about your property and our specialists can help plan the right gutter and downspout solution.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-main" href="/contact#contact-form">Get Quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></section>
 </main>
-<footer class="site-footer"><div class="container"><div class="row g-4"><div class="col-lg-4 col-md-6"><a class="site-footer-brand" href="apexgutters_landing_page.html"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a><p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p></div><div class="col-6 col-md-3 col-lg-2"><h2 class="site-footer-heading">Quick links</h2><ul class="site-footer-links"><li><a href="apexgutters_landing_page.html#hero">Home</a></li><li><a href="apexgutters_about_us_page.html">About Us</a></li><li><a href="apexgutters_services_page%20(1).html">Services</a></li><li><a href="why_choose_us_apexgutters.html">Why Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="team.html">Our team</a></li><li><a href="blog.html">Blog</a></li></ul></div><div class="col-6 col-md-3 col-lg-3"><h2 class="site-footer-heading">Services</h2><ul class="site-footer-links"><li><a href="apexgutters_services_page%20(1).html">Seamless gutters</a></li><li><a href="apexgutters_services_page%20(1).html">Custom copper</a></li><li><a href="apexgutters_services_page%20(1).html">Leaf protection</a></li><li><a href="apexgutters_services_page%20(1).html">Downspout drainage</a></li><li><a href="apexgutters_services_page%20(1).html">Fascia &amp; soffit</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="site-footer-heading">Get in touch</h2><div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div><div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div><div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div><a class="site-quote-button site-shell-focus mt-2" href="apexgutters_landing_page.html#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a></div></div><div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span>&copy; 2026 ApexGutters. All rights reserved.</span><span>Built to protect what matters.</span></div></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/backend.js"></script>
-<script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"></script>
-<script src="assets/motion.js?v=motion-1"></script>
-<script src="assets/metrics.js"></script>
+<footer class="site-footer"><div class="container"><div class="row g-4"><div class="col-lg-4 col-md-6"><a class="site-footer-brand" href="/"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a><p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p></div><div class="col-6 col-md-3 col-lg-2"><h2 class="site-footer-heading">Quick links</h2><ul class="site-footer-links"><li><a href="/#hero">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/services">Services</a></li><li><a href="/why-us">Why Us</a></li><li><a href="/projects">Projects</a></li><li><a href="/team">Our team</a></li><li><a href="/blog">Blog</a></li></ul></div><div class="col-6 col-md-3 col-lg-3"><h2 class="site-footer-heading">Services</h2><ul class="site-footer-links"><li><a href="/services">Seamless gutters</a></li><li><a href="/services">Custom copper</a></li><li><a href="/services">Leaf protection</a></li><li><a href="/services">Downspout drainage</a></li><li><a href="/services">Fascia &amp; soffit</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="site-footer-heading">Get in touch</h2><div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div><div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div><div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div><a class="site-quote-button site-shell-focus mt-2" href="/#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a></div></div><div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span>&copy; 2026 ApexGutters. All rights reserved.</span><span>Built to protect what matters.</span></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"><\/script>
+<script src="assets/backend.js"><\/script>
+<script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"><\/script>
+<script src="assets/motion.js?v=motion-1"><\/script>
+<script src="assets/metrics.js"><\/script>
+<script>
+const bioDialog = document.createElement('dialog');
+bioDialog.className = 'team-bio-dialog';
+bioDialog.setAttribute('aria-labelledby', 'teamBioTitle');
+bioDialog.innerHTML = '<div class="team-bio-dialog-panel"><button class="team-bio-close" type="button" aria-label="Close biography">&times;</button><div class="team-bio-content"><img class="team-bio-image" alt=""><div><div class="team-bio-role"></div><h2 id="teamBioTitle"></h2><p class="team-bio-summary"></p><div class="team-bio-tag"></div></div></div></div>';
+document.body.append(bioDialog);
+
+const bioClose = bioDialog.querySelector('.team-bio-close');
+const bioImage = bioDialog.querySelector('.team-bio-image');
+const bioRole = bioDialog.querySelector('.team-bio-role');
+const bioTitle = bioDialog.querySelector('#teamBioTitle');
+const bioSummary = bioDialog.querySelector('.team-bio-summary');
+const bioTag = bioDialog.querySelector('.team-bio-tag');
+const teamCards = Array.from(document.querySelectorAll('.team-card'));
+
+function showBio(card) {
+  const image = card.querySelector('.team-photo img');
+  bioImage.src = image.currentSrc || image.src;
+  bioImage.alt = image.alt;
+  bioRole.textContent = card.querySelector('.team-role')?.textContent.trim() || '';
+  bioTitle.textContent = card.querySelector('h3')?.textContent.trim() || '';
+  bioSummary.textContent = card.querySelector('.team-info p')?.textContent.trim() || '';
+  bioTag.textContent = card.querySelector('.team-tag')?.textContent.trim() || '';
+  bioDialog.showModal();
+  bioClose.focus();
+}
+
+teamCards.forEach(card => {
+  const name = card.querySelector('h3')?.textContent.trim() || '';
+  const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  card.id = slug;
+  card.querySelector('.socials')?.remove();
+
+  const button = document.createElement('button');
+  button.className = 'team-bio-button';
+  button.type = 'button';
+  button.textContent = 'View Bio';
+  button.setAttribute('aria-label', \`View bio: \${name}\`);
+  card.querySelector('.team-info')?.append(button);
+  button.addEventListener('click', () => showBio(card));
+});
+
+bioClose.addEventListener('click', () => bioDialog.close());
+bioDialog.addEventListener('click', event => {
+  if (event.target === bioDialog) bioDialog.close();
+});
+
+if (location.hash) {
+  const requestedSlug = decodeURIComponent(location.hash.slice(1));
+  const requestedCard = teamCards.find(card => card.id === requestedSlug);
+  const requestedButton = requestedCard?.querySelector('.team-bio-button');
+  requestedButton?.click();
+}
+<\/script>
 </body>
 </html>
+`;export{a as default};

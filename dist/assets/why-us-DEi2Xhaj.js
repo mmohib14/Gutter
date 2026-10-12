@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+const n=`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -562,7 +562,7 @@
     <!-- 2. MAIN NAVIGATION HEADER -->
     <nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="apexgutters_landing_page.html" aria-label="ApexGutters home">
+            <a class="navbar-brand" href="/" aria-label="ApexGutters home">
                 <i class="fa-solid fa-house-chimney-crack site-brand-icon"></i>
                 <span class="site-brand-text">Apex<span>Gutters</span></span>
             </a>
@@ -571,20 +571,20 @@
             </button>
             <div class="collapse navbar-collapse" id="siteNavbar">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_landing_page.html#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_about_us_page.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_services_page%20(1).html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link active" href="why_choose_us_apexgutters.html" aria-current="page">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="team.html">Team</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link active" href="/why-us" aria-current="page">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/blog">Blog</a></li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <div class="site-phone-box">
                         <span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span>
                         <span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span>
                     </div>
-                    <a href="apexgutters_landing_page.html#quote" class="site-quote-button site-shell-focus">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/#quote" class="site-quote-button site-shell-focus">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -597,7 +597,7 @@
                 <div class="col-lg-8">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-3">
-                            <li class="breadcrumb-item"><a href="apexgutters_landing_page.html#hero">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/#hero">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Why Choose Us</li>
                         </ol>
                     </nav>
@@ -670,7 +670,7 @@
                     </div>
 
                     <a href="#quote-form" class="btn btn-custom-orange">
-                        Schedule Free Inspection <i class="fa-solid fa-arrow-right ms-2"></i>
+                        Get Quote <i class="fa-solid fa-arrow-right ms-2"></i>
                     </a>
                 </div>
             </div>
@@ -1016,29 +1016,29 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <a class="site-footer-brand" href="apexgutters_landing_page.html"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a>
+                    <a class="site-footer-brand" href="/"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a>
                     <p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2">
                     <h2 class="site-footer-heading">Quick links</h2>
                     <ul class="site-footer-links">
-                        <li><a href="apexgutters_landing_page.html#hero">Home</a></li>
-                        <li><a href="apexgutters_about_us_page.html">About Us</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Services</a></li>
-                        <li><a href="why_choose_us_apexgutters.html">Why Us</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="team.html">Our team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/#hero">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/why-us">Why Us</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/team">Our team</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3 col-lg-3">
                     <h2 class="site-footer-heading">Services</h2>
                     <ul class="site-footer-links">
-                        <li><a href="apexgutters_services_page%20(1).html">Seamless gutters</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Custom copper</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Leaf protection</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Downspout drainage</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Fascia &amp; soffit</a></li>
+                        <li><a href="/services">Seamless gutters</a></li>
+                        <li><a href="/services">Custom copper</a></li>
+                        <li><a href="/services">Leaf protection</a></li>
+                        <li><a href="/services">Downspout drainage</a></li>
+                        <li><a href="/services">Fascia &amp; soffit</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -1046,7 +1046,7 @@
                     <div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div>
                     <div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div>
                     <div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div>
-                    <a class="site-quote-button site-shell-focus mt-2" href="apexgutters_landing_page.html#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="site-quote-button site-shell-focus mt-2" href="/#quote">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
@@ -1062,7 +1062,7 @@
     </a>
 
     <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"><\/script>
 
     <!-- Custom Interactive JS -->
     <script>
@@ -1094,10 +1094,10 @@
             });
 
         });
-    </script>
-    <script src="assets/backend.js"></script>
-    <script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"></script>
-    <script src="assets/motion.js?v=motion-1"></script>
-    <script src="assets/metrics.js"></script>
+    <\/script>
+    <script src="assets/backend.js"><\/script>
+    <script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"><\/script>
+    <script src="assets/motion.js?v=motion-1"><\/script>
+    <script src="assets/metrics.js"><\/script>
 </body>
-</html>
+</html>`;export{n as default};

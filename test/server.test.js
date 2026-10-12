@@ -4,6 +4,7 @@ const os = require('node:os');
 const path = require('node:path');
 const { after, before, test } = require('node:test');
 const { createServer } = require('../local-server');
+const legacyPaths = require('../route-aliases.json');
 
 const temporaryDirectory = path.join(os.tmpdir(), `apexgutters-test-${process.pid}`);
 const adminToken = 'test-only-admin-token';
@@ -36,44 +37,58 @@ async function postJson(endpoint, body) {
   });
 }
 
-test('serves the home page and local health status', async () => {
+test('serves the React app for the home page and local health status', async () => {
   const home = await fetch(baseUrl);
   assert.equal(home.status, 200);
   assert.match(home.headers.get('content-type'), /text\/html/);
-  assert.match(await home.text(), /ApexGutters/);
+  const appShell = await home.text();
+  assert.match(appShell, /id="root"/);
+  assert.match(appShell, /assets\/index-[^"]+\.js/);
 
   const health = await fetch(`${baseUrl}/api/health`);
   assert.equal(health.status, 200);
   assert.deepEqual(await health.json(), { status: 'ok', storage: 'local-json' });
 });
 
-test('serves the contact page and links the shared quote buttons to it', async () => {
-  const contact = await fetch(`${baseUrl}/contact.html`);
+test('serves clean React routes and redirects legacy HTML URLs', async () => {
+  const contact = await fetch(`${baseUrl}/contact`);
   assert.equal(contact.status, 200);
   assert.match(contact.headers.get('content-type'), /text\/html/);
-  assert.match(await contact.text(), /data-api-form="quote"/);
+  assert.match(await contact.text(), /id="root"/);
 
-  const header = await fetch(`${baseUrl}/partials/header.html`);
-  assert.equal(header.status, 200);
-  const headerMarkup = await header.text();
-  assert.doesNotMatch(headerMarkup, /data-page-link="(?:blog|contact)"/);
-  assert.doesNotMatch(headerMarkup, /href="\/(?:why_choose_us_apexgutters\.html|team\.html|apexgutters_services_page%20\(1\)\.html#faqAccordion)"/);
-  assert.doesNotMatch(headerMarkup, /sharedPagesMenu|>\s*Pages\s*</);
-  assert.match(headerMarkup, /class="shared-top-link" data-page-link="about" href="\/apexgutters_about_us_page\.html">About<\/a>/);
-  assert.match(headerMarkup, /<\/div>\s*<a class="shared-top-link" href="\/apexgutters_services_page%20\(1\)\.html#quote-form">Cost Estimator<\/a>/);
-  assert.equal((headerMarkup.match(/href="\/contact\.html#contact-form"/g) || []).length, 2);
-  assert.equal((headerMarkup.match(/href="tel:18884887767"/g) || []).length, 2);
-  assert.match(headerMarkup, /class="shared-mobile-actions"/);
-  assert.match(headerMarkup, /href="tel:18884887767"/);
+  const detail = await fetch(`${baseUrl}/services/gutter-installation`);
+  assert.equal(detail.status, 200);
+  assert.match(await detail.text(), /id="root"/);
 
-  const footer = await fetch(`${baseUrl}/partials/footer.html`);
-  assert.equal(footer.status, 200);
-  const footerMarkup = await footer.text();
-  assert.match(footerMarkup, /href="\/blog\.html">Blog<\/a>/);
-  assert.match(footerMarkup, /href="\/contact\.html">Contact<\/a>/);
-  assert.match(footerMarkup, /href="\/why_choose_us_apexgutters\.html">Why GutterPro<\/a>/);
-  assert.match(footerMarkup, /href="\/team\.html">Certified Technicians<\/a>/);
-  assert.match(footerMarkup, /href="\/apexgutters_services_page%20\(1\)\.html#faqAccordion">Frequently Asked Questions<\/a>/);
+  const legacyContact = await fetch(`${baseUrl}/contact.html?from=legacy`, { redirect: 'manual' });
+  assert.equal(legacyContact.status, 308);
+  assert.equal(legacyContact.headers.get('location'), '/contact?from=legacy');
+
+  const legacyArticle = await fetch(`${baseUrl}/blog-choosing-gutter-system.html`, { redirect: 'manual' });
+  assert.equal(legacyArticle.status, 308);
+  assert.equal(legacyArticle.headers.get('location'), '/blog/choosing-gutter-system');
+});
+
+test('redirects every retired page URL consistently in local and Vercel routing', async () => {
+  const vercelConfig = JSON.parse(await fs.readFile(path.join(__dirname, '..', 'vercel.json'), 'utf8'));
+  const vercelRedirects = new Map(vercelConfig.redirects.map(({ source, destination }) => [
+    decodeURIComponent(source),
+    destination
+  ]));
+  assert.deepEqual(Object.fromEntries(vercelRedirects), legacyPaths);
+
+  for (const [oldPath, newPath] of Object.entries(legacyPaths)) {
+    const response = await fetch(`${baseUrl}${encodeURI(oldPath)}`, { redirect: 'manual' });
+    assert.equal(response.status, 308, `${oldPath} should permanently redirect`);
+    assert.equal(response.headers.get('location'), newPath, `${oldPath} should redirect to ${newPath}`);
+  }
+});
+
+test('keeps page templates in React source modules instead of root HTML files', async () => {
+  const rootFiles = await fs.readdir(path.join(__dirname, '..'));
+  assert.deepEqual(rootFiles.filter(file => file.endsWith('.html')), ['index.html']);
+  const pageContent = await fs.readdir(path.join(__dirname, '..', 'src', 'page-content'));
+  assert.equal(pageContent.filter(file => file.endsWith('.js')).length, 22);
 });
 
 test('validates leads and persists submitted quote requests', async () => {

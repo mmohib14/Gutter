@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+const n=`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -484,12 +484,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <span class="me-4"><i class="fa-solid fa-location-dot me-2 text-warning"></i>1248 Skyline Blvd, Metro City, NY</span>
+        <span class="me-4"><i class="fa-solid fa-location-dot me-2 text-warning"></i>Serving homeowners and businesses across the local region</span>
                     <span class="me-4"><i class="fa-solid fa-clock me-2 text-warning"></i>Mon - Sat: 7:00 AM - 6:00 PM</span>
                     <span><i class="fa-solid fa-shield-halved me-2 text-warning"></i>Licensed &amp; fully insured</span>
                 </div>
                 <div class="col-lg-4 text-end">
-                    <a href="tel:18005554887"><i class="fa-solid fa-phone me-2 text-warning"></i>(800) 555-GUTR</a>
+        <a href="tel:18884887767"><i class="fa-solid fa-phone me-2 text-warning"></i>(888) 488-7767</a>
                 </div>
             </div>
         </div>
@@ -498,7 +498,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="apexgutters_landing_page.html" aria-label="ApexGutters home">
+            <a class="navbar-brand" href="/" aria-label="ApexGutters home">
                 <i class="fa-solid fa-house-chimney-crack site-brand-icon"></i>
                 <span class="site-brand-text">Apex<span>Gutters</span></span>
             </a>
@@ -507,20 +507,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-menu navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_landing_page.html#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_about_us_page.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link active" href="apexgutters_services_page%20(1).html" aria-current="page">Services</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="why_choose_us_apexgutters.html">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="team.html">Team</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link active" href="/services" aria-current="page">Services</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/why-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/blog">Blog</a></li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <div class="site-phone-box">
                         <span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span>
-                        <span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span>
+                        <span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(888) 488-7767</span></span>
                     </div>
-                    <a href="apexgutters_landing_page.html#quote" class="site-quote-button site-shell-focus">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/contact#contact-form" class="site-quote-button site-shell-focus">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -561,7 +561,7 @@
                         <div class="service-card-body">
                             <h3 class="service-card-title">Seamless Gutter Installation</h3>
                             <p class="service-card-text">Custom-fit aluminum and copper seamless gutters built on-site to match your home's exact dimensions, preventing leaks and structural rot.</p>
-                            <a href="#" class="service-link">Explore Service <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="/services/gutter-installation" class="service-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -579,7 +579,7 @@
                         <div class="service-card-body">
                             <h3 class="service-card-title">Gutter Repair & Realignment</h3>
                             <p class="service-card-text">Fix sagging gutters, leaky seams, rust damage, and loose hangers before water infiltrates your home's foundation or siding.</p>
-                            <a href="#" class="service-link">Explore Service <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="/services/gutter-repair" class="service-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -597,7 +597,7 @@
                         <div class="service-card-body">
                             <h3 class="service-card-title">Deep Cleaning & Maintenance</h3>
                             <p class="service-card-text">Thorough removal of debris, leaves, and pine needles followed by full downspout high-pressure water flushing to ensure unrestricted flow.</p>
-                            <a href="#" class="service-link">Explore Service <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="/services/gutter-cleaning" class="service-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -615,7 +615,7 @@
                         <div class="service-card-body">
                             <h3 class="service-card-title">Leaf Guard & Screen Systems</h3>
                             <p class="service-card-text">Micro-mesh gutter protection systems that keep out leaves, pine needles, and pests while allowing maximum rainwater intake during heavy storms.</p>
-                            <a href="#" class="service-link">Explore Service <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="/services/gutter-guards" class="service-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -633,7 +633,7 @@
                         <div class="service-card-body">
                             <h3 class="service-card-title">Downspout & Underground Drainage</h3>
                             <p class="service-card-text">High-capacity downspout extensions and underground discharge drainage channels designed to channel rainwater far away from foundations.</p>
-                            <a href="#" class="service-link">Explore Service <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="/services/downspouts" class="service-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -651,7 +651,7 @@
                         <div class="service-card-body">
                             <h3 class="service-card-title">Fascia Board & Soffit Replacement</h3>
                             <p class="service-card-text">Repair and replace rotted fascia wood boards and soffit panels to ensure a solid, structural anchoring base for your gutter setup.</p>
-                            <a href="#" class="service-link">Explore Service <i class="fa-solid fa-arrow-right ms-1"></i></a>
+                            <a href="/services/fascia-soffit" class="service-link">Learn More <i class="fa-solid fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -780,7 +780,7 @@
                 <a href="#quote-form" class="btn-apex-primary">
                     <i class="fa-solid fa-calendar-check"></i> REQUEST FREE ESTIMATE
                 </a>
-                <a href="tel:18005554887" class="btn-apex-outline text-white border-secondary">
+                <a href="tel:18884887767" class="btn-apex-outline text-white border-secondary">
                     <i class="fa-solid fa-phone"></i> CALL +1 800 555-4887
                 </a>
             </div>
@@ -906,37 +906,37 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <a class="site-footer-brand" href="apexgutters_landing_page.html"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a>
+                    <a class="site-footer-brand" href="/"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a>
                     <p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2">
                     <h2 class="site-footer-heading">Quick links</h2>
                     <ul class="site-footer-links">
-                        <li><a href="apexgutters_landing_page.html#hero">Home</a></li>
-                        <li><a href="apexgutters_about_us_page.html">About Us</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Services</a></li>
-                        <li><a href="why_choose_us_apexgutters.html">Why Us</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="team.html">Our team</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/#hero">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/why-us">Why Us</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/team">Our team</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3 col-lg-3">
                     <h2 class="site-footer-heading">Services</h2>
                     <ul class="site-footer-links">
-                        <li><a href="apexgutters_services_page%20(1).html">Seamless gutters</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Custom copper</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Leaf protection</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Downspout drainage</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Fascia &amp; soffit</a></li>
+                        <li><a href="/services">Seamless gutters</a></li>
+                        <li><a href="/services">Custom copper</a></li>
+                        <li><a href="/services">Leaf protection</a></li>
+                        <li><a href="/services">Downspout drainage</a></li>
+                        <li><a href="/services">Fascia &amp; soffit</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h2 class="site-footer-heading">Get in touch</h2>
-                    <div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div>
-                    <div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div>
+                    <div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>Service area details available by request</span></div>
+                    <div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18884887767">(888) 488-7767</a></div>
                     <div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div>
-                    <a class="site-quote-button site-shell-focus mt-2" href="apexgutters_landing_page.html#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="site-quote-button site-shell-focus mt-2" href="/contact#contact-form">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
@@ -947,10 +947,10 @@
     </footer>
 
     <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"><\/script>
 
-    <script src="assets/backend.js"></script>
-    <script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"></script>
-    <script src="assets/motion.js?v=motion-1"></script>
+    <script src="assets/backend.js"><\/script>
+    <script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"><\/script>
+    <script src="assets/motion.js?v=motion-1"><\/script>
 </body>
-</html>
+</html>`;export{n as default};

@@ -1,4 +1,4 @@
-<!doctype html>
+const e=`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -57,6 +57,17 @@ body{font-family:'Manrope',sans-serif;color:#596168;line-height:1.65}
 .project-overlay{padding:25px;background:linear-gradient(to top,rgba(16,20,23,.94) 0%,rgba(16,20,23,.43) 47%,rgba(16,20,23,0) 100%)}
 .project-overlay .badge{border-radius:999px;background:#fff!important;color:#202326!important}
 .project-overlay h3{letter-spacing:-.025em}
+.project-detail-button{align-self:flex-start;margin-top:14px;padding:8px 14px;border:1px solid rgba(255,255,255,.9);border-radius:999px;background:#fff;color:#202326;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.project-detail-button:hover,.project-detail-button:focus-visible{background:var(--project-orange);border-color:var(--project-orange);color:#fff}
+.project-dialog{width:min(760px,calc(100% - 28px));max-width:none;max-height:min(90vh,900px);padding:0;border:0;border-radius:18px;color:#202326;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.project-dialog::backdrop{background:rgba(12,16,19,.72)}
+.project-dialog-panel{position:relative;max-height:min(90vh,900px);overflow:auto}
+.project-dialog-close{position:absolute;z-index:1;top:14px;right:14px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#202326;font-size:25px;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.project-dialog-image{width:100%;max-height:430px;object-fit:cover}
+.project-dialog-copy{padding:26px}
+.project-dialog-copy h2{margin:8px 0 10px;font-size:clamp(1.4rem,4vw,2rem)}
+.project-dialog-copy p{margin:0;color:#596168}
+.project-dialog-meta{margin-top:15px;color:#73787d;font-size:.9rem}
 .project-number{top:15px;right:15px;width:38px;height:38px;border:1px solid rgba(255,255,255,.7);border-radius:50%;background:rgba(255,255,255,.94)}
 .project-cta{padding:70px 0;background:#f0eee9}
 .project-cta h2{max-width:720px;letter-spacing:-.04em}
@@ -71,15 +82,15 @@ body{font-family:'Manrope',sans-serif;color:#596168;line-height:1.65}
 </head>
 <body>
 <div class="site-topbar d-none d-lg-block"><div class="container"><div class="row align-items-center"><div class="col-lg-9"><span class="me-4"><i class="fa-solid fa-location-dot me-2 text-warning"></i>1248 Skyline Blvd, Metro City, NY</span><span class="me-4"><i class="fa-solid fa-clock me-2 text-warning"></i>Mon - Sat: 7:00 AM - 6:00 PM</span><span><i class="fa-solid fa-shield-halved me-2 text-warning"></i>Licensed &amp; fully insured</span></div><div class="col-lg-3 text-end"><a href="tel:18005554887"><i class="fa-solid fa-phone me-2 text-warning"></i>(800) 555-GUTR</a></div></div></div></div>
-<nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation"><div class="container"><a class="navbar-brand" href="apexgutters_landing_page.html" aria-label="ApexGutters home"><i class="fa-solid fa-house-chimney-crack site-brand-icon"></i><span class="site-brand-text">Apex<span>Gutters</span></span></a><button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars fs-2"></i></button><div class="collapse navbar-collapse" id="siteNavbar"><ul class="navbar-nav mx-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_landing_page.html#hero">Home</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_about_us_page.html">About Us</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_services_page%20(1).html">Services</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="why_choose_us_apexgutters.html">Why Us</a></li><li class="nav-item"><a class="nav-link site-nav-link active" href="projects.html" aria-current="page">Projects</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="team.html">Team</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="blog.html">Blog</a></li></ul><div class="d-flex align-items-center"><div class="site-phone-box"><span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span><span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span></div><a class="site-quote-button site-shell-focus" href="apexgutters_landing_page.html#quote">Get a quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></nav>
+<nav class="navbar navbar-expand-lg sticky-top site-navbar" aria-label="Main navigation"><div class="container"><a class="navbar-brand" href="/" aria-label="ApexGutters home"><i class="fa-solid fa-house-chimney-crack site-brand-icon"></i><span class="site-brand-text">Apex<span>Gutters</span></span></a><button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#siteNavbar" aria-controls="siteNavbar" aria-expanded="false" aria-label="Toggle navigation"><i class="fa-solid fa-bars fs-2"></i></button><div class="collapse navbar-collapse" id="siteNavbar"><ul class="navbar-nav mx-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link site-nav-link" href="/#hero">Home</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/about">About Us</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/services">Services</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/why-us">Why Us</a></li><li class="nav-item"><a class="nav-link site-nav-link active" href="/projects" aria-current="page">Projects</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/team">Team</a></li><li class="nav-item"><a class="nav-link site-nav-link" href="/blog">Blog</a></li></ul><div class="d-flex align-items-center"><div class="site-phone-box"><span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span><span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span></div><a class="site-quote-button site-shell-focus" href="/#quote">Get Quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></nav>
 <main>
-<section class="projects-hero"><div class="container"><span class="eyebrow"><i class="fa-solid fa-circle-check"></i> Built with care. Made to last.</span><h1>Projects that protect what matters.</h1><p>Explore a selection of our residential and commercial gutter work. Every system is measured, fabricated, and installed for dependable performance and a clean finish.</p><a class="btn-custom-primary hero-action" href="#portfolio">Explore our work <i class="fa-solid fa-arrow-down"></i></a></div></section>
+<section class="projects-hero"><div class="container"><span class="eyebrow"><i class="fa-solid fa-circle-check"></i> Built with care. Made to last.</span><h1>Projects that protect what matters.</h1><p>Explore a selection of our residential and commercial gutter work. Every system is measured, fabricated, and installed for dependable performance and a clean finish.</p><a class="btn-custom-primary hero-action" href="#portfolio">View Projects <i class="fa-solid fa-arrow-down"></i></a></div></section>
 <section class="metrics-section" aria-label="Project achievements"><div class="container"><div class="row g-4"><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="250">250</span>+</div><p class="metric-label">Projects Completed</p></article></div><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="15">15</span>+</div><p class="metric-label">Years Experience</p></article></div><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="98">98</span>%</div><p class="metric-label">Happy Clients</p></article></div><div class="col-6 col-lg-3"><article class="metric-card"><div class="metric-value"><span data-count="100">100</span>%</div><p class="metric-label">Insured Work</p></article></div></div></div></section>
 <section class="project-intro" id="portfolio"><div class="container"><div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3"><div><span class="eyebrow">Our Project Gallery</span><h2 class="m-0">Built to protect. Designed to impress.</h2><p class="mt-3 mb-0">Browse our growing portfolio of residential and commercial gutter installations.</p></div><div class="text-md-end"><span class="small text-secondary fw-bold">18 featured projects</span></div></div></div></section>
 <section class="projects-grid"><div class="container"><div class="filter-wrap" role="group" aria-label="Filter projects by type"><button class="project-filter active" type="button" data-filter="all" aria-pressed="true">All Projects</button><button class="project-filter" type="button" data-filter="residential" aria-pressed="false">Residential</button><button class="project-filter" type="button" data-filter="commercial" aria-pressed="false">Commercial</button><button class="project-filter" type="button" data-filter="copper" aria-pressed="false">Copper</button><button class="project-filter" type="button" data-filter="protection" aria-pressed="false">Leaf Protection</button></div><p class="small text-secondary mb-3" id="projectResults" aria-live="polite">Showing all 18 projects</p><div class="row g-4">
-<div class="col-sm-6 col-lg-4 project-item" data-category="residential copper"><article class="project-card"><span class="project-number">01</span><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Highland Modern Estate" loading="lazy"><div class="project-overlay"><span class="badge">Copper Custom</span><h3>Highland Modern Estate</h3><p>Full seamless copper system with custom rain chains.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Metro City</span><span>Residential</span></div></div></article></div>
-<div class="col-sm-6 col-lg-4 project-item" data-category="residential"><article class="project-card"><span class="project-number">02</span><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=85" alt="Oakridge Residential Villa" loading="lazy"><div class="project-overlay"><span class="badge">K-Style Aluminum</span><h3>Oakridge Residential Villa</h3><p>6-inch matte-black seamless gutter upgrade.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Oakridge</span><span>Residential</span></div></div></article></div>
-<div class="col-sm-6 col-lg-4 project-item" data-category="commercial"><article class="project-card"><span class="project-number">03</span><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Westside Corporate Plaza" loading="lazy"><div class="project-overlay"><span class="badge">Commercial</span><h3>Westside Corporate Plaza</h3><p>Commercial box gutters and internal drainage.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Westside</span><span>Commercial</span></div></div></article></div>
+<div class="col-sm-6 col-lg-4 project-item" data-category="residential copper"><article id="project-highland" class="project-card"><span class="project-number">01</span><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Highland Modern Estate" loading="lazy"><div class="project-overlay"><span class="badge">Copper Custom</span><h3>Highland Modern Estate</h3><p>Full seamless copper system with custom rain chains.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Metro City</span><span>Residential</span></div></div></article></div>
+<div class="col-sm-6 col-lg-4 project-item" data-category="residential"><article id="project-oakridge" class="project-card"><span class="project-number">02</span><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=85" alt="Oakridge Residential Villa" loading="lazy"><div class="project-overlay"><span class="badge">K-Style Aluminum</span><h3>Oakridge Residential Villa</h3><p>6-inch matte-black seamless gutter upgrade.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Oakridge</span><span>Residential</span></div></div></article></div>
+<div class="col-sm-6 col-lg-4 project-item" data-category="commercial"><article id="project-westside" class="project-card"><span class="project-number">03</span><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Westside Corporate Plaza" loading="lazy"><div class="project-overlay"><span class="badge">Commercial</span><h3>Westside Corporate Plaza</h3><p>Commercial box gutters and internal drainage.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Westside</span><span>Commercial</span></div></div></article></div>
 <div class="col-sm-6 col-lg-4 project-item" data-category="residential protection"><article class="project-card"><span class="project-number">04</span><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=85" alt="Maple Street Renovation" loading="lazy"><div class="project-overlay"><span class="badge">Leaf Protection</span><h3>Maple Street Renovation</h3><p>Roofline refresh with seamless gutters and guards.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Maple Street</span><span>Residential</span></div></div></article></div>
 <div class="col-sm-6 col-lg-4 project-item" data-category="residential"><article class="project-card"><span class="project-number">05</span><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=85" alt="Lakeside Family Home" loading="lazy"><div class="project-overlay"><span class="badge">Seamless Aluminum</span><h3>Lakeside Family Home</h3><p>Low-maintenance charcoal gutters for a modern exterior.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Lakeside</span><span>Residential</span></div></div></article></div>
 <div class="col-sm-6 col-lg-4 project-item" data-category="commercial protection"><article class="project-card"><span class="project-number">06</span><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85" alt="Northpoint Retail Center" loading="lazy"><div class="project-overlay"><span class="badge">Leaf Protection</span><h3>Northpoint Retail Center</h3><p>High-capacity drainage with commercial leaf protection.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Northpoint</span><span>Commercial</span></div></div></article></div>
@@ -96,10 +107,10 @@ body{font-family:'Manrope',sans-serif;color:#596168;line-height:1.65}
 <div class="col-sm-6 col-lg-4 project-item" data-category="residential"><article class="project-card"><span class="project-number">17</span><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85" alt="Meadow Lane Residence" loading="lazy"><div class="project-overlay"><span class="badge">Seamless Aluminum</span><h3>Meadow Lane Residence</h3><p>Clean-profile gutters and downspouts matched to the exterior trim.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Meadow Lane</span><span>Residential</span></div></div></article></div>
 <div class="col-sm-6 col-lg-4 project-item" data-category="commercial copper"><article class="project-card"><span class="project-number">18</span><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85" alt="Grand Avenue Offices" loading="lazy"><div class="project-overlay"><span class="badge">Custom Metalwork</span><h3>Grand Avenue Offices</h3><p>Custom metal gutter details integrated with a premium commercial facade.</p><div class="project-meta"><span><i class="fa-solid fa-location-dot"></i> Grand Avenue</span><span>Commercial</span></div></div></article></div>
 </div></div></section>
-<section class="project-cta" id="contact"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-8"><span class="eyebrow">Start Your Project</span><h2 class="mb-2">Ready to add your property to our portfolio?</h2><p class="mb-0">Tell us about your roofline and we’ll help you choose the right gutter system.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-custom-primary" href="mailto:info@example.com">Request A Free Quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></section>
+<section class="project-cta" id="contact"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-8"><span class="eyebrow">Start Your Project</span><h2 class="mb-2">Ready to add your property to our portfolio?</h2><p class="mb-0">Tell us about your roofline and we’ll help you choose the right gutter system.</p></div><div class="col-lg-4 text-lg-end"><a class="btn-custom-primary" href="/contact#contact-form">Get Quote <i class="fa-solid fa-arrow-right"></i></a></div></div></div></section>
 </main>
-<footer class="site-footer"><div class="container"><div class="row g-4"><div class="col-lg-4 col-md-6"><a class="site-footer-brand" href="apexgutters_landing_page.html"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a><p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p></div><div class="col-6 col-md-3 col-lg-2"><h2 class="site-footer-heading">Quick links</h2><ul class="site-footer-links"><li><a href="apexgutters_landing_page.html#hero">Home</a></li><li><a href="apexgutters_about_us_page.html">About Us</a></li><li><a href="apexgutters_services_page%20(1).html">Services</a></li><li><a href="why_choose_us_apexgutters.html">Why Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="team.html">Our team</a></li><li><a href="blog.html">Blog</a></li></ul></div><div class="col-6 col-md-3 col-lg-3"><h2 class="site-footer-heading">Services</h2><ul class="site-footer-links"><li><a href="apexgutters_services_page%20(1).html">Seamless gutters</a></li><li><a href="apexgutters_services_page%20(1).html">Custom copper</a></li><li><a href="apexgutters_services_page%20(1).html">Leaf protection</a></li><li><a href="apexgutters_services_page%20(1).html">Downspout drainage</a></li><li><a href="apexgutters_services_page%20(1).html">Fascia &amp; soffit</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="site-footer-heading">Get in touch</h2><div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div><div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div><div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div><a class="site-quote-button site-shell-focus mt-2" href="apexgutters_landing_page.html#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a></div></div><div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span>&copy; 2026 ApexGutters. All rights reserved.</span><span>Built to protect what matters.</span></div></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="site-footer"><div class="container"><div class="row g-4"><div class="col-lg-4 col-md-6"><a class="site-footer-brand" href="/"><i class="fa-solid fa-house-chimney-crack"></i>Apex<span>Gutters</span></a><p class="site-footer-copy">Custom seamless gutters, copper downspouts, leaf protection, and rainwater management for homes and businesses.</p></div><div class="col-6 col-md-3 col-lg-2"><h2 class="site-footer-heading">Quick links</h2><ul class="site-footer-links"><li><a href="/#hero">Home</a></li><li><a href="/about">About Us</a></li><li><a href="/services">Services</a></li><li><a href="/why-us">Why Us</a></li><li><a href="/projects">Projects</a></li><li><a href="/team">Our team</a></li><li><a href="/blog">Blog</a></li></ul></div><div class="col-6 col-md-3 col-lg-3"><h2 class="site-footer-heading">Services</h2><ul class="site-footer-links"><li><a href="/services">Seamless gutters</a></li><li><a href="/services">Custom copper</a></li><li><a href="/services">Leaf protection</a></li><li><a href="/services">Downspout drainage</a></li><li><a href="/services">Fascia &amp; soffit</a></li></ul></div><div class="col-lg-3 col-md-6"><h2 class="site-footer-heading">Get in touch</h2><div class="site-footer-contact"><i class="fa-solid fa-location-dot"></i><span>1248 Skyline Blvd,<br>Metro City, NY</span></div><div class="site-footer-contact"><i class="fa-solid fa-phone"></i><a href="tel:18005554887">(800) 555-GUTR</a></div><div class="site-footer-contact"><i class="fa-solid fa-clock"></i><span>Mon - Sat: 7:00 AM - 6:00 PM</span></div><a class="site-quote-button site-shell-focus mt-2" href="/#quote">Request a quote <i class="fa-solid fa-arrow-right"></i></a></div></div><div class="site-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"><span>&copy; 2026 ApexGutters. All rights reserved.</span><span>Built to protect what matters.</span></div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"><\/script>
 <script>
 const projectFilters=document.querySelectorAll('.project-filter');
 const projectItems=document.querySelectorAll('.project-item');
@@ -118,15 +129,64 @@ const isVisible=filter==='all'||categories.includes(filter);
 item.classList.toggle('is-hidden',!isVisible);
 if(isVisible)visibleCount++;
 });
-projectResults.textContent=filter==='all'?`Showing all ${visibleCount} projects`:`Showing ${visibleCount} ${button.textContent.trim().toLowerCase()} projects`;
+projectResults.textContent=filter==='all'?\`Showing all \${visibleCount} projects\`:\`Showing \${visibleCount} \${button.textContent.trim().toLowerCase()} projects\`;
 }));
 const requestedCategory=new URLSearchParams(location.search).get('category');
 const requestedFilter=Array.from(projectFilters).find(button=>button.dataset.filter===requestedCategory);
 requestedFilter?.click();
-</script>
-<script src="assets/backend.js"></script>
-<script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"></script>
-<script src="assets/motion.js?v=motion-1"></script>
-<script src="assets/metrics.js"></script>
+<\/script>
+<script>
+const projectDialog = document.createElement('dialog');
+projectDialog.className = 'project-dialog';
+projectDialog.setAttribute('aria-labelledby', 'projectDialogTitle');
+projectDialog.innerHTML = '<div class="project-dialog-panel"><button class="project-dialog-close" type="button" aria-label="Close project details">&times;</button><img class="project-dialog-image" alt=""><div class="project-dialog-copy"><span class="badge"></span><h2 id="projectDialogTitle"></h2><p></p><div class="project-dialog-meta"></div></div></div>';
+document.body.append(projectDialog);
+
+const projectImage = projectDialog.querySelector('.project-dialog-image');
+const projectBadge = projectDialog.querySelector('.badge');
+const projectTitle = projectDialog.querySelector('#projectDialogTitle');
+const projectDescription = projectDialog.querySelector('.project-dialog-copy p');
+const projectMeta = projectDialog.querySelector('.project-dialog-meta');
+const projectClose = projectDialog.querySelector('.project-dialog-close');
+
+document.querySelectorAll('.project-card').forEach(card => {
+  const title = card.querySelector('h3');
+  const overlay = card.querySelector('.project-overlay');
+  if (!title || !overlay) return;
+
+  const button = document.createElement('button');
+  button.className = 'project-detail-button';
+  button.type = 'button';
+  button.textContent = 'View Project';
+  button.setAttribute('aria-label', \`View project: \${title.textContent.trim()}\`);
+  overlay.append(button);
+  button.addEventListener('click', () => {
+    const image = card.querySelector('img');
+    projectImage.src = image.currentSrc || image.src;
+    projectImage.alt = image.alt;
+    projectBadge.textContent = overlay.querySelector('.badge')?.textContent.trim() || '';
+    projectTitle.textContent = title.textContent.trim();
+    projectDescription.textContent = overlay.querySelector('p')?.textContent.trim() || '';
+    projectMeta.textContent = overlay.querySelector('.project-meta')?.textContent.trim().replace(/\\s+/g, ' ') || '';
+    projectDialog.showModal();
+    projectClose.focus();
+  });
+});
+
+projectClose.addEventListener('click', () => projectDialog.close());
+projectDialog.addEventListener('click', event => {
+  if (event.target === projectDialog) projectDialog.close();
+});
+
+if (location.hash) {
+  const linkedProject = document.querySelector(location.hash);
+  linkedProject?.querySelector('.project-detail-button')?.click();
+}
+<\/script>
+<script src="assets/backend.js"><\/script>
+<script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"><\/script>
+<script src="assets/motion.js?v=motion-1"><\/script>
+<script src="assets/metrics.js"><\/script>
 </body>
 </html>
+`;export{e as default};

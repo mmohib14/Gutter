@@ -3,8 +3,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { timingSafeEqual } = require('node:crypto');
 const { SiteStore } = require('./lib/site-store');
+const legacyPaths = require('./route-aliases.json');
 
 const ROOT = __dirname;
+const FRONTEND_ROOT = path.join(ROOT, 'dist');
 const MAX_BODY_BYTES = 16 * 1024;
 const ALLOWED_EXTENSIONS = new Set([
   '.html', '.css', '.js', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.ico', '.woff2'
@@ -112,8 +114,10 @@ function createServer(options = {}) {
     response.setHeader('X-Frame-Options', 'SAMEORIGIN');
 
     let pathname;
+    let requestUrl;
     try {
-      pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
+      requestUrl = new URL(request.url, 'http://localhost');
+      pathname = decodeURIComponent(requestUrl.pathname);
     } catch {
       jsonResponse(response, 400, { error: 'Invalid request URL.' });
       return;
@@ -235,9 +239,25 @@ function createServer(options = {}) {
       return;
     }
 
-    const relativePath = pathname === '/' ? 'apexgutters_landing_page.html' : pathname.slice(1);
-    const filePath = path.resolve(ROOT, relativePath);
+    const canonicalPath = legacyPaths[pathname];
+    if (canonicalPath) {
+      response.writeHead(308, {
+        Location: `${canonicalPath}${requestUrl.search}`,
+        'Cache-Control': 'public, max-age=86400'
+      });
+      response.end();
+      return;
+    }
+
+    let relativePath = pathname === '/' ? 'index.html' : pathname.slice(1);
+    if (path.extname(relativePath).toLowerCase() === '.html') {
+      relativePath = 'index.html';
+    } else if (!path.extname(relativePath)) {
+      relativePath = 'index.html';
+    }
+    const filePath = path.resolve(FRONTEND_ROOT, relativePath);
     if (!filePath.startsWith(`${ROOT}${path.sep}`) ||
+        !filePath.startsWith(`${FRONTEND_ROOT}${path.sep}`) && filePath !== path.join(FRONTEND_ROOT, 'index.html') ||
         relativePath.split(/[\\/]/).some(part => part.startsWith('.')) ||
         relativePath.split(/[\\/]/).includes('data')) {
       jsonResponse(response, 404, { error: 'Page not found.' });
@@ -261,7 +281,8 @@ function createServer(options = {}) {
         '.jpeg': 'image/jpeg',
         '.webp': 'image/webp',
         '.ico': 'image/x-icon',
-        '.woff2': 'font/woff2'
+        '.woff2': 'font/woff2',
+        '.webmanifest': 'application/manifest+json'
       };
       response.writeHead(200, {
         'Content-Type': contentTypes[extension],

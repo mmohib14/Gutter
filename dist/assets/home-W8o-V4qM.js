@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+const n=`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -355,6 +355,28 @@
             box-shadow: var(--shadow-hover);
         }
 
+        .team-bio-link,
+        .project-card-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin-top: 12px;
+            padding: 8px 14px;
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
+            color: var(--color-primary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .team-bio-link:hover,
+        .project-card-action:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
         .team-img-wrap {
             position: relative;
             height: 280px;
@@ -591,12 +613,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-9">
-                    <span class="me-4"><i class="fa-solid fa-location-dot me-2 text-warning"></i> 1248 Skyline Blvd, Metro City, NY</span>
+                    <span class="me-4"><i class="fa-solid fa-location-dot me-2 text-warning"></i>Serving homeowners and businesses across the local region</span>
                     <span class="me-4"><i class="fa-solid fa-clock me-2 text-warning"></i> Mon - Sat: 7:00 AM - 6:00 PM</span>
                     <span><i class="fa-solid fa-shield-halved me-2 text-warning"></i> Licensed &amp; fully insured</span>
                 </div>
                 <div class="col-lg-3 text-end">
-                    <a href="tel:18005554887"><i class="fa-solid fa-phone me-2 text-warning"></i>(800) 555-GUTR</a>
+                    <a href="tel:18884887767"><i class="fa-solid fa-phone me-2 text-warning"></i>(888) 488-7767</a>
                 </div>
             </div>
         </div>
@@ -605,7 +627,7 @@
     <!-- Main Navigation Header -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top site-navbar" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="apexgutters_landing_page.html#hero" aria-label="ApexGutters home">
+            <a class="navbar-brand" href="/#hero" aria-label="ApexGutters home">
                 <i class="fa-solid fa-house-chimney-crack site-brand-icon"></i>
                 <span class="site-brand-text">Apex<span>Gutters</span></span>
             </a>
@@ -616,21 +638,21 @@
 
             <div class="collapse navbar-collapse" id="siteNavbar">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link site-nav-link active" href="apexgutters_landing_page.html#hero" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_about_us_page.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="apexgutters_services_page%20(1).html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="why_choose_us_apexgutters.html">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="team.html">Team</a></li>
-                    <li class="nav-item"><a class="nav-link site-nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link active" href="/#hero" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/why-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link site-nav-link" href="/blog">Blog</a></li>
                 </ul>
 
                 <div class="d-flex align-items-center">
                     <div class="site-phone-box">
                         <span class="site-phone-icon"><i class="fa-solid fa-phone-volume"></i></span>
-                        <span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(800) 555-GUTR</span></span>
+                        <span><span class="site-phone-caption d-block">Emergency call 24/7</span><span class="site-phone-number">(888) 488-7767</span></span>
                     </div>
-                    <a href="#quote" class="site-quote-button site-shell-focus">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#quote" class="site-quote-button site-shell-focus">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -647,11 +669,11 @@
                     
                     <div class="d-flex flex-wrap gap-3 mb-4">
                         <a href="#quote" class="btn-custom-primary">
-                            <span>Get A Free Quote</span>
+                            <span>                            Get Quote</span>
                             <i class="fa-solid fa-paper-plane"></i>
                         </a>
                         <a href="#services" class="btn-custom-outline">
-                            <span>Explore Services</span>
+                            <span>View Services</span>
                             <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
@@ -735,7 +757,7 @@
                     </div>
 
                     <a href="#about" class="btn-custom-primary">
-                        <span>Learn More About Us</span>
+                        <span>About Us</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -786,8 +808,8 @@
                             <div class="service-icon-badge"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                         </div>
                         <h4 class="fw-bold mb-2">Seamless Gutter Installation</h4>
-                        <p class="text-secondary small mb-4">On-site precision roll-formed seamless aluminum and copper gutters designed to prevent leaks and maximize water discharge.</p>
-                        <a href="#quote" class="service-link"><span>Explore Service</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        <p class="text-secondary small mb-4">Custom-fit aluminum and copper gutters, formed on-site to reduce seams and direct runoff.</p>
+                        <a href="/services/gutter-installation" class="service-link"><span>Learn More</span> <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
@@ -799,8 +821,8 @@
                             <div class="service-icon-badge"><i class="fa-solid fa-faucet-drip"></i></div>
                         </div>
                         <h4 class="fw-bold mb-2">Downspout Repair & Upgrades</h4>
-                        <p class="text-secondary small mb-4">Fixing disconnected downspouts, installing splash blocks, and underground drainage piping to channel water away from foundations.</p>
-                        <a href="#quote" class="service-link"><span>Explore Service</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        <p class="text-secondary small mb-4">Repair and reroute downspouts to move runoff away from your foundation.</p>
+                        <a href="/services/downspouts" class="service-link"><span>Learn More</span> <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
@@ -811,9 +833,9 @@
                             <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Gutter Guard & Protection" onerror="this.src='https://placehold.co/400x300/171A1D/FFFFFF?text=Gutter+Guards'">
                             <div class="service-icon-badge"><i class="fa-solid fa-shield-cat"></i></div>
                         </div>
-                        <h4 class="fw-bold mb-2">Leaf & Guard Guards Protection</h4>
-                        <p class="text-secondary small mb-4">Heavy-duty stainless steel micro-mesh guards that eliminate debris blockage while managing peak rainfall volumes.</p>
-                        <a href="#quote" class="service-link"><span>Explore Service</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        <h4 class="fw-bold mb-2">Gutter Guard Protection</h4>
+                        <p class="text-secondary small mb-4">Micro-mesh guards help keep leaves and debris out while water flows through.</p>
+                        <a href="/services/gutter-guards" class="service-link"><span>Learn More</span> <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
@@ -825,8 +847,8 @@
                             <div class="service-icon-badge"><i class="fa-solid fa-broom"></i></div>
                         </div>
                         <h4 class="fw-bold mb-2">Pro Gutter Cleaning & Flush</h4>
-                        <p class="text-secondary small mb-4">Comprehensive debris vacuuming, downspout pressure flushing, and full system structural safety checkups.</p>
-                        <a href="#quote" class="service-link"><span>Explore Service</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        <p class="text-secondary small mb-4">Clear debris, flush downspouts, and check the system for visible issues.</p>
+                        <a href="/services/gutter-cleaning" class="service-link"><span>Learn More</span> <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
@@ -838,8 +860,8 @@
                             <div class="service-icon-badge"><i class="fa-solid fa-hammer"></i></div>
                         </div>
                         <h4 class="fw-bold mb-2">Soffit & Fascia Board Repair</h4>
-                        <p class="text-secondary small mb-4">Repairing wood rot and installing durable aluminum fascia cladding to anchor your gutter system firmly.</p>
-                        <a href="#quote" class="service-link"><span>Explore Service</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        <p class="text-secondary small mb-4">Repair damaged fascia and soffit to support a secure gutter installation.</p>
+                        <a href="/services/fascia-soffit" class="service-link"><span>Learn More</span> <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
@@ -851,8 +873,8 @@
                             <div class="service-icon-badge"><i class="fa-solid fa-building"></i></div>
                         </div>
                         <h4 class="fw-bold mb-2">Commercial Drainage Systems</h4>
-                        <p class="text-secondary small mb-4">Heavy-grade 6" and 7" box gutter solutions designed specifically for industrial, retail, and multi-family structures.</p>
-                        <a href="#quote" class="service-link"><span>Explore Service</span> <i class="fa-solid fa-chevron-right"></i></a>
+                        <p class="text-secondary small mb-4">Plan high-capacity roof drainage for commercial and multi-unit buildings.</p>
+                        <a href="/services/commercial-drainage" class="service-link"><span>Learn More</span> <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -901,7 +923,7 @@
 
                     <div class="mt-4 pt-2">
                         <a href="#quote" class="btn-custom-primary">
-                            <span>Schedule Inspection</span>
+                            <span>Request Inspection</span>
                             <i class="fa-solid fa-calendar-check"></i>
                         </a>
                     </div>
@@ -960,7 +982,7 @@
                     <span class="eyebrow">Recent Work Portfolio</span>
                     <h2 class="display-6 fw-bold m-0">Gutter & Downspout Showcase</h2>
                 </div>
-                <a href="#quote" class="btn-custom-outline mt-3 mt-md-0">View All Recent Projects</a>
+                <a href="/projects#portfolio" class="btn-custom-outline mt-3 mt-md-0">View Projects</a>
             </div>
 
             <div class="row g-4">
@@ -971,6 +993,7 @@
                             <span class="badge bg-warning text-dark align-self-start mb-2">Copper Custom</span>
                             <h4 class="fw-bold mb-1">Highland Modern Estate</h4>
                             <p class="small text-light opacity-75 mb-0">Full Seamless Copper System & Rain Chains</p>
+                            <a class="project-card-action" href="/projects#project-highland">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -982,6 +1005,7 @@
                             <span class="badge bg-warning text-dark align-self-start mb-2">K-Style Aluminum</span>
                             <h4 class="fw-bold mb-1">Oakridge Residential Villa</h4>
                             <p class="small text-light opacity-75 mb-0">6" Matte Black Seamless Gutter Upgrade</p>
+                            <a class="project-card-action" href="/projects#project-oakridge">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -993,6 +1017,7 @@
                             <span class="badge bg-warning text-dark align-self-start mb-2">Commercial</span>
                             <h4 class="fw-bold mb-1">Westside Corporate Plaza</h4>
                             <p class="small text-light opacity-75 mb-0">Commercial Box Gutters & Internal Drainage</p>
+                            <a class="project-card-action" href="/projects#project-westside">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -1017,6 +1042,8 @@
                         </div>
                         <h4 class="fw-bold mb-1">Robert Miller</h4>
                         <p class="text-primary fw-semibold small mb-0">Senior Installation Lead</p>
+                        <p class="small text-secondary mt-2">Leads installations with a focus on accurate pitch, secure fastening, and clean finishing.</p>
+                        <a class="team-bio-link" href="/team#robert-miller">View Bio</a>
                     </div>
                 </div>
 
@@ -1027,6 +1054,8 @@
                         </div>
                         <h4 class="fw-bold mb-1">Sarah Jenkins</h4>
                         <p class="text-primary fw-semibold small mb-0">Water Flow Safety Specialist</p>
+                        <p class="small text-secondary mt-2">Checks drainage paths and helps projects achieve dependable water flow.</p>
+                        <a class="team-bio-link" href="/team#sarah-jenkins">View Bio</a>
                     </div>
                 </div>
 
@@ -1037,6 +1066,8 @@
                         </div>
                         <h4 class="fw-bold mb-1">David Vance</h4>
                         <p class="text-primary fw-semibold small mb-0">Custom Copper Fabricator</p>
+                        <p class="small text-secondary mt-2">Creates custom copper gutter details and metalwork for distinctive properties.</p>
+                        <a class="team-bio-link" href="/team#david-vance">View Bio</a>
                     </div>
                 </div>
             </div>
@@ -1058,7 +1089,7 @@
                         </div>
                         <div>
                             <div class="fw-bold text-dark">Direct Phone</div>
-                            <div class="text-secondary">(800) 555-GUTR / (555) 234-5678</div>
+                            <div class="text-secondary">(888) 488-7767</div>
                         </div>
                     </div>
 
@@ -1068,7 +1099,7 @@
                         </div>
                         <div>
                             <div class="fw-bold text-dark">Email Inquiries</div>
-                            <div class="text-secondary">quotes@apexgutters-example.com</div>
+                            <div class="text-secondary">info@apexgutters.com</div>
                         </div>
                     </div>
 
@@ -1119,7 +1150,7 @@
                                 </div>
                                 <div class="col-12 mt-4">
                                     <button type="submit" class="btn-custom-primary w-100 justify-content-center">
-                                        <span>Submit Free Quote Request</span>
+                                        <span>Send Request</span>
                                         <i class="fa-solid fa-paper-plane me-0 ms-2"></i>
                                     </button>
                                 </div>
@@ -1221,9 +1252,9 @@
                         </div>
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <div class="small text-muted mb-2">Maintenance • 5 min read</div>
-                            <h5 class="fw-bold text-dark mb-3">5 Warning Signs Your Home Gutters Are Damaging Your Foundation</h5>
-                            <p class="text-secondary small mb-4">Learn how overflow line stains and basement moisture indicate immediate downspout repairs.</p>
-                            <a href="#quote" class="service-link mt-auto">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+                            <h5 class="fw-bold text-dark mb-3">7 Signs Your Gutters Need Attention</h5>
+                            <p class="text-secondary small mb-4">Spot common warning signs before gutter problems cause damage.</p>
+                            <a href="/blog/gutter-warning-signs" class="service-link mt-auto">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1236,9 +1267,9 @@
                         </div>
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <div class="small text-muted mb-2">Buyer's Guide • 7 min read</div>
-                            <h5 class="fw-bold text-dark mb-3">Seamless vs. Sectional Gutters: Which Is Worth The Investment?</h5>
-                            <p class="text-secondary small mb-4">A complete breakdown of seam failure rates, aesthetics, and lifetime replacement costs.</p>
-                            <a href="#quote" class="service-link mt-auto">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+                            <h5 class="fw-bold text-dark mb-3">Seamless vs. Sectional Gutters</h5>
+                            <p class="text-secondary small mb-4">Compare the design, maintenance, and installation trade-offs.</p>
+                            <a href="/blog/seamless-vs-sectional-gutters" class="service-link mt-auto">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1251,9 +1282,9 @@
                         </div>
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <div class="small text-muted mb-2">Storm Prep • 4 min read</div>
-                            <h5 class="fw-bold text-dark mb-3">How To Prepare Your Roof Drainage Before Heavy Winter Snow & Ice</h5>
-                            <p class="text-secondary small mb-4">Preventing ice damming along roof eaves with heated cables and heavy-duty fascia brackets.</p>
-                            <a href="#quote" class="service-link mt-auto">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+                            <h5 class="fw-bold text-dark mb-3">Seasonal Gutter Checklist</h5>
+                            <p class="text-secondary small mb-4">Use a simple routine to keep gutters clear and spot common problems.</p>
+                            <a href="/blog/seasonal-gutter-checklist" class="service-link mt-auto">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1276,24 +1307,24 @@
                 <div class="col-6 col-md-3 col-lg-2">
                     <h5 class="footer-heading">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="apexgutters_landing_page.html#hero">Home</a></li>
-                        <li><a href="apexgutters_about_us_page.html">About Us</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Services</a></li>
-                        <li><a href="why_choose_us_apexgutters.html">Why Choose Us</a></li>
-                        <li><a href="projects.html">Work Projects</a></li>
-                        <li><a href="team.html">Team Members</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/#hero">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/why-us">Why Choose Us</a></li>
+                        <li><a href="/projects">Work Projects</a></li>
+                        <li><a href="/team">Team Members</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="col-6 col-md-3 col-lg-3">
                     <h5 class="footer-heading">Services</h5>
                     <ul class="footer-links">
-                        <li><a href="apexgutters_services_page%20(1).html">Seamless Aluminum Gutters</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Copper Gutter Fabrication</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Leaf Guards &amp; Micro-Mesh</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Underground Downspout Piping</a></li>
-                        <li><a href="apexgutters_services_page%20(1).html">Soffit &amp; Fascia Replacement</a></li>
+                        <li><a href="/services">Seamless Aluminum Gutters</a></li>
+                        <li><a href="/services">Copper Gutter Fabrication</a></li>
+                        <li><a href="/services">Leaf Guards &amp; Micro-Mesh</a></li>
+                        <li><a href="/services">Underground Downspout Piping</a></li>
+                        <li><a href="/services">Soffit &amp; Fascia Replacement</a></li>
                     </ul>
                 </div>
 
@@ -1326,7 +1357,7 @@
     </div>
 
     <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"><\/script>
 
     <script>
         function showToast(message) {
@@ -1361,10 +1392,10 @@
                 }
             });
         });
-    </script>
-    <script src="assets/backend.js"></script>
-    <script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"></script>
-    <script src="assets/motion.js?v=motion-1"></script>
-    <script src="assets/metrics.js"></script>
+    <\/script>
+    <script src="assets/backend.js"><\/script>
+    <script src="assets/shared-shell.js?v=navbar-breakpoints-20261009"><\/script>
+    <script src="assets/motion.js?v=motion-1"><\/script>
+    <script src="assets/metrics.js"><\/script>
 </body>
-</html>
+</html>`;export{n as default};
