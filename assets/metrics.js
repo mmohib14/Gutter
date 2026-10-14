@@ -1,10 +1,6 @@
 (() => {
-  const sections = document.querySelectorAll('.metrics-section');
-  const quoteSection = document.querySelector('.quote-section');
-  if (!sections.length && !quoteSection) return;
-
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const animatedSections = [...sections, ...(quoteSection ? [quoteSection] : [])];
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let observer;
 
   function formatCount(element, value) {
     const decimals = Number(element.dataset.decimals || 0);
@@ -18,14 +14,14 @@
     const target = Number(element.dataset.count);
     if (!Number.isFinite(target)) return;
     element.textContent = formatCount(element, target);
-    if (!reducedMotion) element.closest('.metric-value')?.classList.add('is-counted');
+    if (!reducedMotion.matches) element.closest('.metric-value')?.classList.add('is-counted');
   }
 
   function animateCount(element) {
     const target = Number(element.dataset.count);
     if (!Number.isFinite(target)) return;
 
-    if (reducedMotion) {
+    if (reducedMotion.matches) {
       finishCount(element);
       return;
     }
@@ -47,29 +43,43 @@
     requestAnimationFrame(update);
   }
 
-  if (reducedMotion || !('IntersectionObserver' in window)) {
-    for (const section of animatedSections) {
-      section.classList.add('is-visible');
-      section.querySelectorAll('[data-count]').forEach(finishCount);
+  function initializeMetrics() {
+    const sections = Array.from(document.querySelectorAll('.metrics-section, .quote-section'))
+      .filter(section => section.dataset.metricsReady !== 'true');
+    if (!sections.length) return;
+
+    for (const section of sections) {
+      section.dataset.metricsReady = 'true';
+
+      if (section.matches('.metrics-section')) {
+        section.querySelectorAll('.metric-card').forEach((card, index) => {
+          card.style.setProperty('--metric-delay', `${index * 100}ms`);
+        });
+      }
+
+      if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+        section.classList.add('is-visible');
+        section.querySelectorAll('[data-count]').forEach(finishCount);
+        continue;
+      }
+
+      section.classList.add('is-ready');
+      if (!observer) {
+        observer = new IntersectionObserver((entries, currentObserver) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const visibleSection = entry.target;
+            visibleSection.classList.add('is-visible');
+            visibleSection.querySelectorAll('[data-count]').forEach(animateCount);
+            currentObserver.unobserve(visibleSection);
+          }
+        }, { threshold: 0.25 });
+      }
+      observer.observe(section);
     }
-    return;
   }
 
-  const observer = new IntersectionObserver((entries, currentObserver) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      const section = entry.target;
-      section.classList.add('is-visible');
-      section.querySelectorAll('[data-count]').forEach(animateCount);
-      currentObserver.unobserve(section);
-    }
-  }, { threshold: 0.25 });
-
-  for (const section of animatedSections) {
-    section.querySelectorAll('.metric-card').forEach((card, index) => {
-      card.style.setProperty('--metric-delay', `${index * 100}ms`);
-    });
-    section.classList.add('is-ready');
-    observer.observe(section);
-  }
+  initializeMetrics();
+  document.addEventListener('site-page:ready', initializeMetrics);
+  document.addEventListener('site-shell:ready', initializeMetrics);
 })();

@@ -91,7 +91,6 @@
   }
 
   initializeMotion();
-  document.addEventListener('site-shell:ready', () => {
-    initializeMotion(document.querySelector('.site-footer') || document);
-  });
+  document.addEventListener('site-page:ready', () => initializeMotion());
+  document.addEventListener('site-shell:ready', () => initializeMotion());
 })();

@@ -225,6 +225,7 @@ function LegacyPage({ page, onDetail }) {
     }
     canonicalLink.href = `${window.location.origin}${location.pathname}`;
     window.scrollTo(0, 0);
+    document.dispatchEvent(new CustomEvent('site-page:ready'));
     if (location.hash) {
       requestAnimationFrame(() => {
         let target = document.getElementById(decodeURIComponent(location.hash.slice(1)));

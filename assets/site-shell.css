@@ -969,13 +969,64 @@
     transform: translateX(3px);
 }
 
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .legacy-page :is(
+        .btn-custom-primary,
+        .btn-custom-outline,
+        .btn-main,
+        .team-bio-button,
+        .project-detail-button,
+        .project-card-action,
+        .team-bio-link
+    ) {
+        transition: transform .25s cubic-bezier(.2, .7, .2, 1),
+            box-shadow .25s ease, filter .25s ease;
+    }
+
+    .legacy-page :is(
+        .btn-custom-primary,
+        .btn-custom-outline,
+        .btn-main,
+        .team-bio-button,
+        .project-detail-button,
+        .project-card-action,
+        .team-bio-link
+    ):hover {
+        transform: translateY(-2px);
+        filter: saturate(1.04);
+        box-shadow: 0 9px 22px rgba(23, 26, 29, .14);
+    }
+
+    .legacy-page :is(
+        .btn-custom-primary,
+        .btn-custom-outline,
+        .btn-main,
+        .team-bio-button,
+        .project-detail-button,
+        .project-card-action,
+        .team-bio-link
+    ):active {
+        transform: translateY(0) scale(.985);
+        box-shadow: none;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .motion-reveal,
     .motion-image-reveal img,
     .btn-custom-primary > i,
     .btn-custom-outline > i,
     .btn-main > i,
-    .site-quote-button > i {
+    .site-quote-button > i,
+    .legacy-page :is(
+        .btn-custom-primary,
+        .btn-custom-outline,
+        .btn-main,
+        .team-bio-button,
+        .project-detail-button,
+        .project-card-action,
+        .team-bio-link
+    ) {
         opacity: 1;
         transform: none;
         transition: none !important;
